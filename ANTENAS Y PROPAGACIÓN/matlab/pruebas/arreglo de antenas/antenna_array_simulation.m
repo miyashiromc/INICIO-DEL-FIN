@@ -1,14 +1,18 @@
 function antenna_array_simulation
     % Configuración principal de la figura
-    fig = figure('Name', 'Simulación de Arreglo de Dipolos - Versión Estable', ...
+    fig = figure('Name', 'Simulación de Arreglo de Antenas - Versión Corregida', ...
                 'NumberTitle', 'off', ...
                 'Position', [100, 100, 1350, 950], ...
                 'Color', [0.96 0.96 0.96], ...
                 'MenuBar', 'none', ...
                 'ToolBar', 'figure');
     
+    %% Variables compartidas
+    handles = struct();
+    handles.currentView = [30, 30]; % Almacena azimut y elevación
+    
     %% Panel de controles (20% del ancho)
-    controlPanel = uipanel('Parent', fig, ...
+    handles.controlPanel = uipanel('Parent', fig, ...
                          'Title', 'CONTROL DEL ARREGLO', ...
                          'Position', [0.02 0.02 0.20 0.96], ...
                          'BackgroundColor', [0.94 0.94 0.94], ...
@@ -16,15 +20,32 @@ function antenna_array_simulation
                          'FontWeight', 'bold', ...
                          'ForegroundColor', [0.2 0.2 0.6]);
     
-    % Variables para almacenar el estado de rotación
-    currentView = [30, 30]; % Almacena azimut y elevación
-    
     % Espaciado vertical entre controles
-    verticalSpacing = 75;
+    verticalSpacing = 70;
     currentY = 400;
     
-    % Control para número de elementos
-    uicontrol('Parent', controlPanel, ...
+    %% Control para tipo de antena
+    uicontrol('Parent', handles.controlPanel, ...
+              'Style', 'text', ...
+              'Position', [25 currentY 160 22], ...
+              'String', 'Tipo de Antena:', ...
+              'FontSize', 10, ...
+              'FontWeight', 'bold', ...
+              'HorizontalAlignment', 'left', ...
+              'BackgroundColor', [0.94 0.94 0.94]);
+    
+    handles.antennaType = uicontrol('Parent', handles.controlPanel, ...
+                          'Style', 'popup', ...
+                          'Position', [25 currentY-28 160 25], ...
+                          'String', {'Isotrópica', 'Dipolo λ/2', 'Yagi-Uda'}, ...
+                          'Value', 2, ...
+                          'BackgroundColor', [0.9 0.9 0.9], ...
+                          'FontSize', 9);
+    
+    currentY = currentY - verticalSpacing;
+    
+    %% Control para número de elementos
+    uicontrol('Parent', handles.controlPanel, ...
               'Style', 'text', ...
               'Position', [25 currentY 160 22], ...
               'String', 'Número de elementos (N):', ...
@@ -33,14 +54,14 @@ function antenna_array_simulation
               'HorizontalAlignment', 'left', ...
               'BackgroundColor', [0.94 0.94 0.94]);
     
-    N_slider = uicontrol('Parent', controlPanel, ...
+    handles.N_slider = uicontrol('Parent', handles.controlPanel, ...
                         'Style', 'slider', ...
                         'Position', [25 currentY-28 140 20], ...
                         'Min', 1, 'Max', 20, 'Value', 4, ...
                         'SliderStep', [1/19 2/19], ...
                         'BackgroundColor', [0.9 0.9 0.9]);
     
-    N_label = uicontrol('Parent', controlPanel, ...
+    handles.N_label = uicontrol('Parent', handles.controlPanel, ...
                        'Style', 'text', ...
                        'Position', [175 currentY-28 30 20], ...
                        'String', '4', ...
@@ -51,8 +72,8 @@ function antenna_array_simulation
     
     currentY = currentY - verticalSpacing;
     
-    % Control para separación entre elementos
-    uicontrol('Parent', controlPanel, ...
+    %% Control para separación entre elementos
+    uicontrol('Parent', handles.controlPanel, ...
               'Style', 'text', ...
               'Position', [25 currentY 160 22], ...
               'String', 'Separación (d/λ):', ...
@@ -61,14 +82,14 @@ function antenna_array_simulation
               'HorizontalAlignment', 'left', ...
               'BackgroundColor', [0.94 0.94 0.94]);
     
-    d_slider = uicontrol('Parent', controlPanel, ...
+    handles.d_slider = uicontrol('Parent', handles.controlPanel, ...
                         'Style', 'slider', ...
                         'Position', [25 currentY-28 140 20], ...
                         'Min', 0.1, 'Max', 2, 'Value', 0.5, ...
                         'SliderStep', [0.1/1.9 0.2/1.9], ...
                         'BackgroundColor', [0.9 0.9 0.9]);
     
-    d_label = uicontrol('Parent', controlPanel, ...
+    handles.d_label = uicontrol('Parent', handles.controlPanel, ...
                        'Style', 'text', ...
                        'Position', [175 currentY-28 30 20], ...
                        'String', '0.5', ...
@@ -78,7 +99,7 @@ function antenna_array_simulation
                        'ForegroundColor', [0.2 0.2 0.8]);
     
     %% Panel de visualización (78% del ancho)
-    visPanel = uipanel('Parent', fig, ...
+    handles.visPanel = uipanel('Parent', fig, ...
                       'Title', 'VISUALIZACIÓN DEL PATRÓN', ...
                       'Position', [0.22 0.02 0.76 0.96], ...
                       'BackgroundColor', [0.96 0.96 0.96], ...
@@ -86,129 +107,130 @@ function antenna_array_simulation
                       'FontWeight', 'bold', ...
                       'ForegroundColor', [0.2 0.2 0.6]);
     
-    % Gráfico 3D principal (60% superior)
-    ax_3d = axes('Parent', visPanel, ...
+    %% Gráfico 3D principal (60% superior)
+    handles.ax_3d = axes('Parent', handles.visPanel, ...
                 'Position', [0.10 0.45 0.80 0.50], ...
                 'Box', 'on', ...
                 'FontSize', 9);
     
-    % Habilitar rotación 3D con callback para guardar vista
-    rotate3d(ax_3d);
-    set(ax_3d, 'ButtonDownFcn', @storeCurrentView);
+    rotate3d(handles.ax_3d);
+    set(handles.ax_3d, 'ButtonDownFcn', @(src,evt)storeCurrentView(handles));
     
-    % Gráficos polares para cortes (40% inferior)
-    ax_h = polaraxes('Parent', visPanel, ...
+    %% Gráficos polares para cortes (40% inferior)
+    handles.ax_h = polaraxes('Parent', handles.visPanel, ...
                    'Position', [0.10 0.08 0.35 0.30]);
     
-    ax_e = polaraxes('Parent', visPanel, ...
+    handles.ax_e = polaraxes('Parent', handles.visPanel, ...
                    'Position', [0.55 0.08 0.35 0.30]);
     
-    %% Información adicional
-    infoPanel = uipanel('Parent', controlPanel, ...
-                       'Title', 'INFORMACIÓN', ...
-                       'Position', [0.05 0.05 0.90 0.18], ...
-                       'BackgroundColor', [0.92 0.94 0.98], ...
-                       'FontSize', 9, ...
-                       'FontWeight', 'bold');
+    %% Configurar callbacks
+    set([handles.N_slider, handles.d_slider, handles.antennaType], ...
+        'Callback', @(src,evt)update_plots(handles));
     
-    infoText = uicontrol('Parent', infoPanel, ...
-                        'Style', 'text', ...
-                        'Position', [10 5 170 60], ...
-                        'String', sprintf('ARREGLO LINEAL\n• Dipolo λ/2\n• N: 1-20\n• d: 0.1λ-2.0λ'), ...
-                        'FontSize', 9, ...
-                        'FontWeight', 'bold', ...
-                        'HorizontalAlignment', 'center', ...
-                        'BackgroundColor', [0.92 0.94 0.98]);
+    %% Ejecutar primera actualización
+    update_plots(handles);
     
-    %% Funciones auxiliares
-    function storeCurrentView(~,~)
+    %% Funciones anidadas
+    function storeCurrentView(h)
         % Guarda la vista actual al interactuar con el gráfico 3D
-        currentView = get(ax_3d, 'View');
+        h.currentView = get(h.ax_3d, 'View');
+        guidata(h.controlPanel, h);
     end
-    
-    %% Función de actualización mejorada
-    function update_plots(~,~)
-        N = round(get(N_slider, 'Value'));
-        d = get(d_slider, 'Value');
+
+    function update_plots(h)
+        % Obtener valores actuales
+        N = round(get(h.N_slider, 'Value'));
+        d = get(h.d_slider, 'Value');
+        antenna_idx = get(h.antennaType, 'Value');
         
-        set(N_label, 'String', num2str(N));
-        set(d_label, 'String', num2str(d, 2));
+        % Actualizar etiquetas
+        set(h.N_label, 'String', num2str(N));
+        set(h.d_label, 'String', num2str(d, 2));
         
         % Cálculo del patrón
-        [theta, phi, F] = calculate_radiation_pattern(N, d);
+        [theta, phi] = meshgrid(linspace(0, pi, 181), linspace(0, 2*pi, 361));
         
-        % Visualización 3D manteniendo la vista actual
-        cla(ax_3d);
+        % Patrón del elemento según selección
+        switch antenna_idx
+            case 1 % Isotrópica
+                Fe = ones(size(theta));
+            case 2 % Dipolo λ/2
+                Fe = abs(cos(pi/2*cos(theta)) ./ sin(theta));
+                Fe(theta==0 | theta==pi) = 0;
+            case 3 % Yagi-Uda
+                Fe = cos(theta).^4;
+                Fe(theta<pi/2 | theta>3*pi/2) = 0;
+                Fe = Fe/max(Fe(:));
+        end
+        
+        % Factor de arreglo
+        psi = 2*pi * d * sin(theta) .* cos(phi);
+        Fa = sin(N*psi/2) ./ (N*sin(psi/2));
+        Fa(psi==0) = 1;
+        
+        F = Fe .* abs(Fa);
+        
+        % Visualización 3D
+        cla(h.ax_3d);
         F_norm = F / max(F(:));
         [x, y, z] = sph2cart(phi, pi/2-theta, F_norm);
-        surf(ax_3d, x, y, z, F_norm, 'EdgeColor', 'none', 'FaceAlpha', 0.85);
-        axis(ax_3d, 'equal');
-        colormap(ax_3d, 'jet');
-        c = colorbar(ax_3d, 'Location', 'eastoutside');
+        surf(h.ax_3d, x, y, z, F_norm, 'EdgeColor', 'none', 'FaceAlpha', 0.85);
+        axis(h.ax_3d, 'equal');
+        colormap(h.ax_3d, 'jet');
+        c = colorbar(h.ax_3d, 'Location', 'eastoutside');
         c.Label.String = 'Ganancia Norm.';
         c.Label.FontSize = 8;
         c.Label.FontWeight = 'bold';
-        xlabel(ax_3d, 'X (λ)', 'FontSize', 9);
-        ylabel(ax_3d, 'Y (λ)', 'FontSize', 9);
-        zlabel(ax_3d, 'Z (λ)', 'FontSize', 9);
-        title(ax_3d, sprintf('PATRÓN 3D - N=%d, d=%.2fλ', N, d), 'FontSize', 10);
-        view(ax_3d, currentView); % Restaura la vista guardada
-        grid(ax_3d, 'on');
-        shading(ax_3d, 'interp');
+        xlabel(h.ax_3d, 'X (λ)', 'FontSize', 9);
+        ylabel(h.ax_3d, 'Y (λ)', 'FontSize', 9);
+        zlabel(h.ax_3d, 'Z (λ)', 'FontSize', 9);
         
-        % Re-habilitar rotación después de actualizar
-        rotate3d(ax_3d);
-        set(ax_3d, 'ButtonDownFcn', @storeCurrentView);
+        antenna_names = {'Isotrópica', 'Dipolo λ/2', 'Yagi-Uda'};
+        title(h.ax_3d, sprintf('PATRÓN 3D - %s\nN=%d, d=%.2fλ', antenna_names{antenna_idx}, N, d), 'FontSize', 10);
+        view(h.ax_3d, h.currentView);
+        grid(h.ax_3d, 'on');
+        shading(h.ax_3d, 'interp');
         
+        rotate3d(h.ax_3d);
+        set(h.ax_3d, 'ButtonDownFcn', @(src,evt)storeCurrentView(h));
+        
+        %% Cortes polares
         % Corte H (plano XY)
-        cla(ax_h);
+        cla(h.ax_h);
         idx = abs(theta(1,:) - pi/2) < 0.01;
         if any(idx)
-            polarplot(ax_h, phi(:,idx), F(:,idx)/max(F(:)), 'LineWidth', 1.8, 'Color', [0 0.4 0.8]);
-            title(ax_h, sprintf('CORTE H (XY)\nN=%d, d=%.2fλ', N, d), 'FontSize', 9);
-            ax_h.RLim = [0 1]; % Forma correcta de establecer límites radiales
-            ax_h.ThetaZeroLocation = 'top';
-            ax_h.FontSize = 8;
+            polarplot(h.ax_h, phi(:,idx), F(:,idx)/max(F(:)), 'LineWidth', 1.8, 'Color', [0 0.4 0.8]);
+            title(h.ax_h, sprintf('CORTE H (XY)\n%s', antenna_names{antenna_idx}), 'FontSize', 9);
+            h.ax_h.RLim = [0 1];
+            h.ax_h.ThetaZeroLocation = 'top';
+            h.ax_h.FontSize = 8;
         end
         
         % Corte E (plano XZ)
-        cla(ax_e);
+        cla(h.ax_e);
         theta_e = linspace(0, 2*pi, 361)';
-        Fe = abs(cos(pi/2*cos(theta_e))) ./ abs(sin(theta_e));
-        Fe(theta_e==0 | theta_e==pi) = 0;
-        psi = 2*pi * d * sin(theta_e);
-        Fa = sin(N*psi/2) ./ (N*sin(psi/2));
-        Fa(psi==0) = 1;
-        F_e = Fe.*abs(Fa)/max(Fe.*abs(Fa));
+        switch antenna_idx
+            case 1 % Isotrópica
+                Fe_e = ones(size(theta_e));
+            case 2 % Dipolo λ/2
+                Fe_e = abs(cos(pi/2*cos(theta_e)) ./ sin(theta_e));
+                Fe_e(theta_e==0 | theta_e==pi) = 0;
+            case 3 % Yagi-Uda
+                Fe_e = cos(theta_e).^4;
+                Fe_e(theta_e<pi/2 | theta_e>3*pi/2) = 0;
+                Fe_e = Fe_e/max(Fe_e);
+        end
         
-        polarplot(ax_e, theta_e, F_e, 'LineWidth', 1.8, 'Color', [0.8 0.2 0.2]);
-        title(ax_e, sprintf('CORTE E (XZ)\nN=%d, d=%.2fλ', N, d), 'FontSize', 9);
-        ax_e.ThetaTick = 0:30:330;
-        ax_e.RLim = [0 1]; % Forma correcta de establecer límites radiales
-        ax_e.ThetaZeroLocation = 'top';
-        ax_e.FontSize = 8;
+        psi_e = 2*pi * d * sin(theta_e);
+        Fa_e = sin(N*psi_e/2) ./ (N*sin(psi_e/2));
+        Fa_e(psi_e==0) = 1;
+        F_e = Fe_e.*abs(Fa_e)/max(Fe_e.*abs(Fa_e));
+        
+        polarplot(h.ax_e, theta_e, F_e, 'LineWidth', 1.8, 'Color', [0.8 0.2 0.2]);
+        title(h.ax_e, sprintf('CORTE E (XZ)\n%s', antenna_names{antenna_idx}), 'FontSize', 9);
+        h.ax_e.ThetaTick = 0:30:330;
+        h.ax_e.RLim = [0 1];
+        h.ax_e.ThetaZeroLocation = 'top';
+        h.ax_e.FontSize = 8;
     end
-
-    % Configurar callbacks
-    set(N_slider, 'Callback', @update_plots);
-    set(d_slider, 'Callback', @update_plots);
-    
-    % Ejecutar primera actualización
-    update_plots();
-end
-
-function [theta, phi, F] = calculate_radiation_pattern(N, d)
-    % Rejilla angular optimizada
-    [theta, phi] = meshgrid(linspace(0, pi, 181), linspace(0, 2*pi, 361));
-    
-    % Patrón del elemento dipolo
-    Fe = abs(cos(pi/2*cos(theta)) ./ sin(theta));
-    Fe(theta==0 | theta==pi) = 0;
-    
-    % Factor de arreglo
-    psi = 2*pi * d * sin(theta) .* cos(phi);
-    Fa = sin(N*psi/2) ./ (N*sin(psi/2));
-    Fa(psi==0) = 1;
-    
-    F = Fe .* abs(Fa);
 end
