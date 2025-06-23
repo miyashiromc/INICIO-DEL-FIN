@@ -1,0 +1,430 @@
+classdef untitled < matlab.apps.AppBase
+
+    properties (Access = public)
+        % Interfaz gráfica
+        UIFigure                matlab.ui.Figure
+        % Controles de entrada
+        FrequencyMHzLabel       matlab.ui.control.Label
+        FrequencyEditField      matlab.ui.control.NumericEditField
+        NumberofDirectorsLabel  matlab.ui.control.Label
+        DirectorsSpinner        matlab.ui.control.Spinner
+        ReflectorLengthmLabel   matlab.ui.control.Label
+        ReflectorLengthEditField matlab.ui.control.NumericEditField
+        DipoleLengthmLabel      matlab.ui.control.Label
+        DipoleLengthEditField   matlab.ui.control.NumericEditField
+        DirectorLengthmLabel    matlab.ui.control.Label
+        DirectorLengthEditField matlab.ui.control.NumericEditField
+        ReflectorSpacingmLabel  matlab.ui.control.Label
+        ReflectorSpacingEditField matlab.ui.control.NumericEditField
+        DirectorSpacingmLabel   matlab.ui.control.Label
+        DirectorSpacingEditField matlab.ui.control.NumericEditField
+        DiameterLabel           matlab.ui.control.Label
+        DiameterEditField       matlab.ui.control.NumericEditField
+        SimulateButton          matlab.ui.control.Button
+        UseDefaultValuesCheckBox matlab.ui.control.CheckBox
+        % Gráficos
+        UIAxes3D               matlab.ui.control.UIAxes
+        UIAxesAzimuth          matlab.ui.control.UIAxes
+        UIAxesElevation        matlab.ui.control.UIAxes
+        ElementPositionsPlot   matlab.ui.control.UIAxes
+        % Resultados
+        ResultsTextArea        matlab.ui.control.TextArea
+        GainSlider             matlab.ui.control.Slider
+        GainSliderLabel        matlab.ui.control.Label
+    end
+
+    methods (Access = private)
+
+        function SimulateButtonPushed(app, event)
+            try
+                % Obtener parámetros de entrada
+                f_MHz = app.FrequencyEditField.Value;
+                if f_MHz <= 0
+                    error('La frecuencia debe ser positiva');
+                end
+                f = f_MHz * 1e6; % Convertir MHz a Hz
+                c = 3e8; % Velocidad de la luz
+                lambda = c / f; % Longitud de onda en metros
+                num_directors = app.DirectorsSpinner.Value;
+                conductor_diameter = app.DiameterEditField.Value;
+                
+                % Calcular valores óptimos si se usa la casilla
+                if app.UseDefaultValuesCheckBox.Value
+                    % Fórmulas de diseño óptimo basadas en teoría Yagi-Uda
+                    L_reflector = 0.5 * lambda * 1.05; % Reflector 5% más largo que λ/2
+                    L_dipole = 0.5 * lambda * 0.95;   % Dipolo 5% más corto que λ/2
+                    L_director = 0.5 * lambda * 0.9;   % Directores 10% más cortos que λ/2
+                    
+                    % Espaciamientos óptimos
+                    s_reflector = 0.2 * lambda; % Espaciado reflector (15-25% de λ)
+                    s_director = 0.3 * lambda;  % Espaciado directores (25-35% de λ)
+                    
+                    % Actualizar campos de la interfaz
+                    app.ReflectorLengthEditField.Value = L_reflector;
+                    app.DipoleLengthEditField.Value = L_dipole;
+                    app.DirectorLengthEditField.Value = L_director;
+                    app.ReflectorSpacingEditField.Value = s_reflector;
+                    app.DirectorSpacingEditField.Value = s_director;
+                else
+                    % Usar valores especificados por el usuario
+                    L_reflector = app.ReflectorLengthEditField.Value;
+                    L_dipole = app.DipoleLengthEditField.Value;
+                    L_director = app.DirectorLengthEditField.Value;
+                    s_reflector = app.ReflectorSpacingEditField.Value;
+                    s_director = app.DirectorSpacingEditField.Value;
+                end
+                
+                % Validar entradas
+                if any([L_reflector, L_dipole, L_director, s_reflector, s_director] <= 0)
+                    error('Todos los largos y espaciamientos deben ser positivos');
+                end
+                
+                % Posiciones y largos de elementos
+                positions = zeros(1, num_directors + 2); % Reflector, Dipolo, Directores
+                lengths = zeros(1, num_directors + 2);
+                
+                % Reflector en posición 0
+                positions(1) = 0;
+                lengths(1) = L_reflector;
+                
+                % Posición del dipolo
+                positions(2) = s_reflector;
+                lengths(2) = L_dipole;
+                
+                % Posiciones y largos de directores (gradualmente más cortos)
+                for i = 1:num_directors
+                    positions(i + 2) = positions(i + 1) + s_director;
+                    lengths(i + 2) = L_director * (1 - 0.01*i); % Directores ligeramente más cortos
+                end
+                
+                % Graficar posiciones de elementos
+                cla(app.ElementPositionsPlot);
+                hold(app.ElementPositionsPlot, 'on');
+                
+                % Dibujar reflector
+                plot(app.ElementPositionsPlot, [positions(1) positions(1)], ...
+                    [-lengths(1)/2 lengths(1)/2], 'LineWidth', 3, 'Color', 'r');
+                
+                % Dibujar dipolo
+                plot(app.ElementPositionsPlot, [positions(2) positions(2)], ...
+                    [-lengths(2)/2 lengths(2)/2], 'LineWidth', 3, 'Color', 'b');
+                
+                % Dibujar directores
+                for i = 3:length(positions)
+                    plot(app.ElementPositionsPlot, [positions(i) positions(i)], ...
+                        [-lengths(i)/2 lengths(i)/2], 'LineWidth', 2, 'Color', 'g');
+                end
+                
+                title(app.ElementPositionsPlot, 'Posición de Elementos y Largos');
+                xlabel(app.ElementPositionsPlot, 'Posición a lo largo del boom (m)');
+                ylabel(app.ElementPositionsPlot, 'Largo del elemento (m)');
+                legend(app.ElementPositionsPlot, {'Reflector', 'Dipolo', 'Directores'}, 'Location', 'northeast');
+                grid(app.ElementPositionsPlot, 'on');
+                hold(app.ElementPositionsPlot, 'off');
+                
+                % Calcular patrón de radiación con modelo más preciso
+                theta = linspace(0, pi, 181); % 0 a 180 grados en radianes
+                phi = linspace(0, 2*pi, 361); % 0 a 360 grados en radianes
+                [THETA, PHI] = meshgrid(theta, phi);
+                
+                % Calcular factor de arreglo
+                k = 2 * pi / lambda;
+                AF = zeros(size(THETA));
+                
+                % Aproximación de distribución de corriente (sinusoidal)
+                for i = 1:length(positions)
+                    I_magnitude = sin(pi * lengths(i)/lambda); % Magnitud de corriente
+                    phase_shift = -k * positions(i); % Desplazamiento de fase natural por posición
+                    
+                    % Ajustes de fase adicionales según el rol del elemento
+                    if i == 1 % Reflector
+                        phase_shift = phase_shift + deg2rad(-180);
+                    elseif i > 2 % Directores
+                        phase_shift = phase_shift + deg2rad(-20);
+                    end
+                    
+                    AF = AF + I_magnitude * exp(1j * (k * positions(i) * cos(THETA) + phase_shift));
+                end
+                
+                % Patrón de elemento para cada dipolo (distribución de corriente sinusoidal)
+                element_pattern = abs(cos(k*lengths(2)/2 * cos(THETA)) - cos(k*lengths(2)/2)) ./ sin(THETA);
+                element_pattern(isnan(element_pattern)) = 0;
+                
+                % Patrón total (factor de arreglo * patrón de elemento)
+                pattern = abs(AF) .* element_pattern;
+                pattern = pattern / max(pattern(:)); % Normalizar
+                pattern_db = 10 * log10(pattern + eps); % Convertir a dB
+                
+                % Calcular directividad (fórmula más precisa)
+                D0 = 10 * log10(1.5 * num_directors + 2.15); % Fórmula empírica para ganancia Yagi
+                pattern_db = pattern_db + D0; % Escalar a ganancia esperada
+                
+                % Calcular relación frente/espalda
+                [max_gain, ~] = max(pattern_db(:));
+                [min_gain, ~] = min(pattern_db(:));
+                fbr = max_gain - min_gain;
+                
+                % Impedancia de dipolo plegado
+                Z_dipole = 73 + 42.5*(conductor_diameter/lambda)^0.8; % Impedancia con corrección por diámetro
+                Z_folded = 4 * Z_dipole; % Impedancia de dipolo plegado
+                
+                % Graficar patrón 3D
+                cla(app.UIAxes3D);
+                [X, Y, Z] = sph2cart(PHI, pi/2 - THETA, pattern_db + abs(min(pattern_db(:))) + 1);
+                surf(app.UIAxes3D, X, Y, Z, pattern_db, 'EdgeColor', 'none');
+                title(app.UIAxes3D, ['Patrón de Radiación 3D (Ganancia Máx: ' num2str(D0, '%.1f') ' dB)']);
+                xlabel(app.UIAxes3D, 'X');
+                ylabel(app.UIAxes3D, 'Y');
+                zlabel(app.UIAxes3D, 'Z');
+                colormap(app.UIAxes3D, 'jet');
+                colorbar(app.UIAxes3D);
+                view(app.UIAxes3D, 45, 30);
+                axis(app.UIAxes3D, 'equal');
+                
+                % Corte azimutal (theta = 90 grados)
+                cla(app.UIAxesAzimuth);
+                azimuth_cut = pattern_db(:, 91); % theta = 90 grados
+                plot(app.UIAxesAzimuth, linspace(0, 360, 361), azimuth_cut, 'LineWidth', 2);
+                title(app.UIAxesAzimuth, 'Corte Azimutal - Plano H (θ=90°)');
+                xlabel(app.UIAxesAzimuth, 'φ (grados)');
+                ylabel(app.UIAxesAzimuth, 'Ganancia (dB)');
+                grid(app.UIAxesAzimuth, 'on');
+                ylim(app.UIAxesAzimuth, [min(azimuth_cut)-5 max(azimuth_cut)+5]);
+                
+                % Corte de elevación (phi = 0 grados)
+                cla(app.UIAxesElevation);
+                elevation_cut = pattern_db(1, :); % phi = 0 grados
+                plot(app.UIAxesElevation, linspace(0, 180, 181), elevation_cut, 'LineWidth', 2);
+                title(app.UIAxesElevation, 'Corte de Elevación - Plano E (φ=0°)');
+                xlabel(app.UIAxesElevation, 'θ (grados)');
+                ylabel(app.UIAxesElevation, 'Ganancia (dB)');
+                grid(app.UIAxesElevation, 'on');
+                ylim(app.UIAxesElevation, [min(elevation_cut)-5 max(elevation_cut)+5]);
+                
+                % Actualizar slider de ganancia
+                app.GainSlider.Limits = [floor(min(pattern_db(:))) ceil(max(pattern_db(:)))];
+                app.GainSlider.Value = max(pattern_db(:));
+                app.GainSliderLabel.Text = ['Ganancia Máxima: ' num2str(D0, '%.1f') ' dB'];
+                
+                % Mostrar resultados
+                results_text = {
+                    sprintf('Antena Yagi-Uda con %d elementos', num_directors+2);
+                    sprintf('Frecuencia: %.2f MHz (λ = %.3f m)', f_MHz, lambda);
+                    sprintf('Ganancia Máxima: %.1f dB', D0);
+                    sprintf('Relación Frente/Espalda: %.1f dB', fbr);
+                    sprintf('Impedancia Dipolo Plegado: %.1f Ω', Z_folded);
+                    sprintf('Largo Total Antena: %.3f m (%.2fλ)', positions(end), positions(end)/lambda);
+                    '';
+                    'Parámetros de Elementos:';
+                    sprintf('Reflector: L=%.3fm (%.3fλ), d=%.3fm (%.3fλ)', ...
+                        L_reflector, L_reflector/lambda, s_reflector, s_reflector/lambda);
+                    sprintf('Dipolo Activo: L=%.3fm (%.3fλ)', L_dipole, L_dipole/lambda);
+                    sprintf('Directores: L=%.3fm (%.3fλ), d=%.3fm (%.3fλ)', ...
+                        L_director, L_director/lambda, s_director, s_director/lambda);
+                    sprintf('Diámetro Conductor: %.1f mm (%.5fλ)', conductor_diameter*1000, conductor_diameter/lambda);
+                    '';
+                    'Nota: Todos los largos se muestran en metros y longitudes de onda como referencia';
+                };
+                
+                app.ResultsTextArea.Value = results_text;
+                
+            catch ME
+                errordlg(ME.message, 'Error de Simulación');
+                app.ResultsTextArea.Value = {'Error durante la simulación:', ME.message};
+            end
+        end
+    end
+
+    methods (Access = private)
+        function createComponents(app)
+            % Crear figura principal
+            app.UIFigure = uifigure('Visible', 'off');
+            app.UIFigure.Position = [100 100 1200 800];
+            app.UIFigure.Name = 'Diseñador de Antena Yagi-Uda';
+            app.UIFigure.Color = [0.96 0.96 0.96];
+            
+            % Crear controles de entrada
+            y_pos = 750;
+            label_width = 150;
+            field_width = 100;
+            spacing = 30;
+            
+            % Frecuencia de entrada
+            app.FrequencyMHzLabel = uilabel(app.UIFigure);
+            app.FrequencyMHzLabel.Position = [20 y_pos label_width 22];
+            app.FrequencyMHzLabel.Text = 'Frecuencia (MHz)';
+            app.FrequencyMHzLabel.FontWeight = 'bold';
+            
+            app.FrequencyEditField = uieditfield(app.UIFigure, 'numeric');
+            app.FrequencyEditField.Position = [180 y_pos field_width 22];
+            app.FrequencyEditField.Value = 144; % Valor por defecto banda de 2m
+            app.FrequencyEditField.Limits = [1 10000];
+            
+            % Número de directores
+            y_pos = y_pos - spacing;
+            app.NumberofDirectorsLabel = uilabel(app.UIFigure);
+            app.NumberofDirectorsLabel.Position = [20 y_pos label_width 22];
+            app.NumberofDirectorsLabel.Text = 'Número de Directores';
+            app.NumberofDirectorsLabel.FontWeight = 'bold';
+            
+            app.DirectorsSpinner = uispinner(app.UIFigure);
+            app.DirectorsSpinner.Limits = [1 20];
+            app.DirectorsSpinner.Position = [180 y_pos field_width 22];
+            app.DirectorsSpinner.Value = 3;
+            app.DirectorsSpinner.RoundFractionalValues = 'on';
+            
+            % Casilla para usar valores por defecto
+            y_pos = y_pos - spacing;
+            app.UseDefaultValuesCheckBox = uicheckbox(app.UIFigure);
+            app.UseDefaultValuesCheckBox.Text = 'Usar Valores Óptimos por Defecto';
+            app.UseDefaultValuesCheckBox.Position = [20 y_pos 200 22];
+            app.UseDefaultValuesCheckBox.Value = true;
+            app.UseDefaultValuesCheckBox.FontWeight = 'bold';
+            
+            % Largo del reflector
+            y_pos = y_pos - spacing;
+            app.ReflectorLengthmLabel = uilabel(app.UIFigure);
+            app.ReflectorLengthmLabel.Position = [20 y_pos label_width 22];
+            app.ReflectorLengthmLabel.Text = 'Largo Reflector (m)';
+            
+            app.ReflectorLengthEditField = uieditfield(app.UIFigure, 'numeric');
+            app.ReflectorLengthEditField.Position = [180 y_pos field_width 22];
+            app.ReflectorLengthEditField.Value = 0.5 * (3e8/(144e6)) * 1.05;
+            app.ReflectorLengthEditField.Limits = [0.001 10];
+            
+            % Largo del dipolo
+            y_pos = y_pos - spacing;
+            app.DipoleLengthmLabel = uilabel(app.UIFigure);
+            app.DipoleLengthmLabel.Position = [20 y_pos label_width 22];
+            app.DipoleLengthmLabel.Text = 'Largo Dipolo (m)';
+            
+            app.DipoleLengthEditField = uieditfield(app.UIFigure, 'numeric');
+            app.DipoleLengthEditField.Position = [180 y_pos field_width 22];
+            app.DipoleLengthEditField.Value = 0.5 * (3e8/(144e6)) * 0.95;
+            app.DipoleLengthEditField.Limits = [0.001 10];
+            
+            % Largo de directores
+            y_pos = y_pos - spacing;
+            app.DirectorLengthmLabel = uilabel(app.UIFigure);
+            app.DirectorLengthmLabel.Position = [20 y_pos label_width 22];
+            app.DirectorLengthmLabel.Text = 'Largo Director (m)';
+            
+            app.DirectorLengthEditField = uieditfield(app.UIFigure, 'numeric');
+            app.DirectorLengthEditField.Position = [180 y_pos field_width 22];
+            app.DirectorLengthEditField.Value = 0.5 * (3e8/(144e6)) * 0.9;
+            app.DirectorLengthEditField.Limits = [0.001 10];
+            
+            % Espaciado reflector
+            y_pos = y_pos - spacing;
+            app.ReflectorSpacingmLabel = uilabel(app.UIFigure);
+            app.ReflectorSpacingmLabel.Position = [20 y_pos label_width 22];
+            app.ReflectorSpacingmLabel.Text = 'Espaciado Reflector (m)';
+            
+            app.ReflectorSpacingEditField = uieditfield(app.UIFigure, 'numeric');
+            app.ReflectorSpacingEditField.Position = [180 y_pos field_width 22];
+            app.ReflectorSpacingEditField.Value = 0.2 * (3e8/(144e6));
+            app.ReflectorSpacingEditField.Limits = [0.001 10];
+            
+            % Espaciado directores
+            y_pos = y_pos - spacing;
+            app.DirectorSpacingmLabel = uilabel(app.UIFigure);
+            app.DirectorSpacingmLabel.Position = [20 y_pos label_width 22];
+            app.DirectorSpacingmLabel.Text = 'Espaciado Directores (m)';
+            
+            app.DirectorSpacingEditField = uieditfield(app.UIFigure, 'numeric');
+            app.DirectorSpacingEditField.Position = [180 y_pos field_width 22];
+            app.DirectorSpacingEditField.Value = 0.3 * (3e8/(144e6));
+            app.DirectorSpacingEditField.Limits = [0.001 10];
+            
+            % Diámetro del conductor
+            y_pos = y_pos - spacing;
+            app.DiameterLabel = uilabel(app.UIFigure);
+            app.DiameterLabel.Position = [20 y_pos label_width 22];
+            app.DiameterLabel.Text = 'Diámetro Conductor (m)';
+            
+            app.DiameterEditField = uieditfield(app.UIFigure, 'numeric');
+            app.DiameterEditField.Position = [180 y_pos field_width 22];
+            app.DiameterEditField.Value = 0.003;
+            app.DiameterEditField.Limits = [0.0001 0.1];
+            
+            % Botón de simulación
+            app.SimulateButton = uibutton(app.UIFigure, 'push');
+            app.SimulateButton.ButtonPushedFcn = createCallbackFcn(app, @SimulateButtonPushed, true);
+            app.SimulateButton.Position = [20 y_pos-50 260 40];
+            app.SimulateButton.Text = 'Simular Antena Yagi-Uda';
+            app.SimulateButton.FontWeight = 'bold';
+            app.SimulateButton.FontSize = 14;
+            app.SimulateButton.BackgroundColor = [0.3 0.6 1];
+            app.SimulateButton.FontColor = [1 1 1];
+            
+            % Área de resultados
+            app.ResultsTextArea = uitextarea(app.UIFigure);
+            app.ResultsTextArea.Position = [20 20 300 200];
+            app.ResultsTextArea.Value = {'Los resultados de simulación aparecerán aquí...'};
+            app.ResultsTextArea.FontName = 'Courier New';
+            
+            % Slider de ganancia
+            app.GainSliderLabel = uilabel(app.UIFigure);
+            app.GainSliderLabel.Position = [20 230 260 22];
+            app.GainSliderLabel.Text = 'Ganancia Máxima: 0 dB';
+            app.GainSliderLabel.FontWeight = 'bold';
+            
+            app.GainSlider = uislider(app.UIFigure);
+            app.GainSlider.Position = [20 210 260 3];
+            app.GainSlider.Limits = [0 20];
+            app.GainSlider.Value = 10;
+            app.GainSlider.Enable = 'off';
+            
+            % Crear ejes para gráficos
+            app.UIAxes3D = uiaxes(app.UIFigure);
+            title(app.UIAxes3D, 'Patrón de Radiación 3D')
+            xlabel(app.UIAxes3D, 'X')
+            ylabel(app.UIAxes3D, 'Y')
+            zlabel(app.UIAxes3D, 'Z')
+            app.UIAxes3D.Position = [350 400 600 350];
+            app.UIAxes3D.FontWeight = 'bold';
+            
+            app.ElementPositionsPlot = uiaxes(app.UIFigure);
+            title(app.ElementPositionsPlot, 'Elementos de la Antena')
+            xlabel(app.ElementPositionsPlot, 'Posición (m)')
+            ylabel(app.ElementPositionsPlot, 'Largo (m)')
+            app.ElementPositionsPlot.Position = [350 20 600 350];
+            app.ElementPositionsPlot.FontWeight = 'bold';
+            grid(app.ElementPositionsPlot, 'on');
+            
+            app.UIAxesAzimuth = uiaxes(app.UIFigure);
+            title(app.UIAxesAzimuth, 'Corte Azimutal - Plano H (θ=90°)')
+            xlabel(app.UIAxesAzimuth, 'φ (grados)')
+            ylabel(app.UIAxesAzimuth, 'Ganancia (dB)')
+            app.UIAxesAzimuth.Position = [1000 500 300 250];
+            app.UIAxesAzimuth.FontWeight = 'bold';
+            grid(app.UIAxesAzimuth, 'on');
+            
+            app.UIAxesElevation = uiaxes(app.UIFigure);
+            title(app.UIAxesElevation, 'Corte de Elevación - Plano E (φ=0°)')
+            xlabel(app.UIAxesElevation, 'θ (grados)')
+            ylabel(app.UIAxesElevation, 'Ganancia (dB)')
+            app.UIAxesElevation.Position = [1000 200 300 250];
+            app.UIAxesElevation.FontWeight = 'bold';
+            grid(app.UIAxesElevation, 'on');
+            
+            % Mostrar la figura después de crear todos los componentes
+            app.UIFigure.Visible = 'on';
+        end
+    end
+
+    methods (Access = public)
+        function app = untitled
+            createComponents(app)
+            registerApp(app, app.UIFigure)
+            
+            if nargout == 0
+                clear app
+            end
+        end
+        
+        function delete(app)
+            delete(app.UIFigure)
+        end
+    end
+end
