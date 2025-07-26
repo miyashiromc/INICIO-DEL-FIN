@@ -1,0 +1,5 @@
+{
+  "name": "Visualizador de Radiación Solar",
+  "description": "Una aplicación web interactiva que muestra datos de radiación solar en un mapa geográfico. Los usuarios pueden explorar puntos de datos, ver la intensidad de la radiación a través de un código de colores y obtener detalles específicos al interactuar con el mapa.",
+  "requestFramePermissions": []
+}

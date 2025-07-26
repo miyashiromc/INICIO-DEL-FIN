@@ -14,14 +14,4 @@ antennaObject.ArmSpacing = [0.05568, 0.04677, 0.03929, 0.033, 0.02772, 0.02329, 
 figure;
 show(antennaObject) 
 
-%% Antenna Analysis 
-% Define plot frequency 
-plotFrequency = 300*1e6;
-% Define frequency range 
-freqRange = (100:55:500)*1e6;
-% Reference Impedance 
-refImpedance = 50;
-% pattern
-figure;
-pattern(antennaObject, plotFrequency)
 

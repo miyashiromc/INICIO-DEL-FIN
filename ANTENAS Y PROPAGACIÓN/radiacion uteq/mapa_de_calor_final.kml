@@ -1,0 +1,3125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<name>Mapa de Calor de Radiacion</name>
+<Style id="heatmapEstilo_1">
+  <IconStyle>
+    <color>cc830000</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_2">
+  <IconStyle>
+    <color>cc870000</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_3">
+  <IconStyle>
+    <color>cc8B0000</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_4">
+  <IconStyle>
+    <color>cc8F0000</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_5">
+  <IconStyle>
+    <color>cc930000</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_6">
+  <IconStyle>
+    <color>cc970000</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_7">
+  <IconStyle>
+    <color>cc9B0000</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_8">
+  <IconStyle>
+    <color>cc9F0000</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_9">
+  <IconStyle>
+    <color>ccA30000</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_10">
+  <IconStyle>
+    <color>ccA70000</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_11">
+  <IconStyle>
+    <color>ccAB0000</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_12">
+  <IconStyle>
+    <color>ccAF0000</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_13">
+  <IconStyle>
+    <color>ccB30000</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_14">
+  <IconStyle>
+    <color>ccB70000</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_15">
+  <IconStyle>
+    <color>ccBB0000</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_16">
+  <IconStyle>
+    <color>ccBF0000</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_17">
+  <IconStyle>
+    <color>ccC30000</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_18">
+  <IconStyle>
+    <color>ccC70000</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_19">
+  <IconStyle>
+    <color>ccCB0000</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_20">
+  <IconStyle>
+    <color>ccCF0000</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_21">
+  <IconStyle>
+    <color>ccD30000</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_22">
+  <IconStyle>
+    <color>ccD70000</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_23">
+  <IconStyle>
+    <color>ccDB0000</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_24">
+  <IconStyle>
+    <color>ccDF0000</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_25">
+  <IconStyle>
+    <color>ccE30000</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_26">
+  <IconStyle>
+    <color>ccE70000</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_27">
+  <IconStyle>
+    <color>ccEB0000</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_28">
+  <IconStyle>
+    <color>ccEF0000</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_29">
+  <IconStyle>
+    <color>ccF30000</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_30">
+  <IconStyle>
+    <color>ccF70000</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_31">
+  <IconStyle>
+    <color>ccFB0000</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_32">
+  <IconStyle>
+    <color>ccFF0000</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_33">
+  <IconStyle>
+    <color>ccFF0300</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_34">
+  <IconStyle>
+    <color>ccFF0700</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_35">
+  <IconStyle>
+    <color>ccFF0B00</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_36">
+  <IconStyle>
+    <color>ccFF0F00</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_37">
+  <IconStyle>
+    <color>ccFF1300</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_38">
+  <IconStyle>
+    <color>ccFF1700</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_39">
+  <IconStyle>
+    <color>ccFF1B00</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_40">
+  <IconStyle>
+    <color>ccFF1F00</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_41">
+  <IconStyle>
+    <color>ccFF2300</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_42">
+  <IconStyle>
+    <color>ccFF2700</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_43">
+  <IconStyle>
+    <color>ccFF2B00</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_44">
+  <IconStyle>
+    <color>ccFF2F00</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_45">
+  <IconStyle>
+    <color>ccFF3300</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_46">
+  <IconStyle>
+    <color>ccFF3700</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_47">
+  <IconStyle>
+    <color>ccFF3B00</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_48">
+  <IconStyle>
+    <color>ccFF3F00</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_49">
+  <IconStyle>
+    <color>ccFF4300</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_50">
+  <IconStyle>
+    <color>ccFF4700</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_51">
+  <IconStyle>
+    <color>ccFF4B00</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_52">
+  <IconStyle>
+    <color>ccFF4F00</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_53">
+  <IconStyle>
+    <color>ccFF5300</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_54">
+  <IconStyle>
+    <color>ccFF5700</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_55">
+  <IconStyle>
+    <color>ccFF5B00</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_56">
+  <IconStyle>
+    <color>ccFF5F00</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_57">
+  <IconStyle>
+    <color>ccFF6300</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_58">
+  <IconStyle>
+    <color>ccFF6700</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_59">
+  <IconStyle>
+    <color>ccFF6B00</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_60">
+  <IconStyle>
+    <color>ccFF6F00</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_61">
+  <IconStyle>
+    <color>ccFF7300</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_62">
+  <IconStyle>
+    <color>ccFF7700</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_63">
+  <IconStyle>
+    <color>ccFF7B00</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_64">
+  <IconStyle>
+    <color>ccFF7F00</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_65">
+  <IconStyle>
+    <color>ccFF8300</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_66">
+  <IconStyle>
+    <color>ccFF8700</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_67">
+  <IconStyle>
+    <color>ccFF8B00</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_68">
+  <IconStyle>
+    <color>ccFF8F00</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_69">
+  <IconStyle>
+    <color>ccFF9300</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_70">
+  <IconStyle>
+    <color>ccFF9700</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_71">
+  <IconStyle>
+    <color>ccFF9B00</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_72">
+  <IconStyle>
+    <color>ccFF9F00</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_73">
+  <IconStyle>
+    <color>ccFFA300</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_74">
+  <IconStyle>
+    <color>ccFFA700</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_75">
+  <IconStyle>
+    <color>ccFFAB00</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_76">
+  <IconStyle>
+    <color>ccFFAF00</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_77">
+  <IconStyle>
+    <color>ccFFB300</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_78">
+  <IconStyle>
+    <color>ccFFB700</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_79">
+  <IconStyle>
+    <color>ccFFBB00</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_80">
+  <IconStyle>
+    <color>ccFFBF00</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_81">
+  <IconStyle>
+    <color>ccFFC300</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_82">
+  <IconStyle>
+    <color>ccFFC700</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_83">
+  <IconStyle>
+    <color>ccFFCB00</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_84">
+  <IconStyle>
+    <color>ccFFCF00</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_85">
+  <IconStyle>
+    <color>ccFFD300</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_86">
+  <IconStyle>
+    <color>ccFFD700</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_87">
+  <IconStyle>
+    <color>ccFFDB00</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_88">
+  <IconStyle>
+    <color>ccFFDF00</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_89">
+  <IconStyle>
+    <color>ccFFE300</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_90">
+  <IconStyle>
+    <color>ccFFE700</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_91">
+  <IconStyle>
+    <color>ccFFEB00</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_92">
+  <IconStyle>
+    <color>ccFFEF00</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_93">
+  <IconStyle>
+    <color>ccFFF300</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_94">
+  <IconStyle>
+    <color>ccFFF700</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_95">
+  <IconStyle>
+    <color>ccFFFB00</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_96">
+  <IconStyle>
+    <color>ccFFFF00</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_97">
+  <IconStyle>
+    <color>ccFBFF03</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_98">
+  <IconStyle>
+    <color>ccF7FF07</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_99">
+  <IconStyle>
+    <color>ccF3FF0B</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_100">
+  <IconStyle>
+    <color>ccEFFF0F</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_101">
+  <IconStyle>
+    <color>ccEBFF13</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_102">
+  <IconStyle>
+    <color>ccE7FF17</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_103">
+  <IconStyle>
+    <color>ccE3FF1B</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_104">
+  <IconStyle>
+    <color>ccDFFF1F</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_105">
+  <IconStyle>
+    <color>ccDBFF23</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_106">
+  <IconStyle>
+    <color>ccD7FF27</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_107">
+  <IconStyle>
+    <color>ccD3FF2B</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_108">
+  <IconStyle>
+    <color>ccCFFF2F</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_109">
+  <IconStyle>
+    <color>ccCBFF33</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_110">
+  <IconStyle>
+    <color>ccC7FF37</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_111">
+  <IconStyle>
+    <color>ccC3FF3B</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_112">
+  <IconStyle>
+    <color>ccBFFF3F</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_113">
+  <IconStyle>
+    <color>ccBBFF43</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_114">
+  <IconStyle>
+    <color>ccB7FF47</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_115">
+  <IconStyle>
+    <color>ccB3FF4B</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_116">
+  <IconStyle>
+    <color>ccAFFF4F</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_117">
+  <IconStyle>
+    <color>ccABFF53</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_118">
+  <IconStyle>
+    <color>ccA7FF57</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_119">
+  <IconStyle>
+    <color>ccA3FF5B</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_120">
+  <IconStyle>
+    <color>cc9FFF5F</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_121">
+  <IconStyle>
+    <color>cc9BFF63</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_122">
+  <IconStyle>
+    <color>cc97FF67</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_123">
+  <IconStyle>
+    <color>cc93FF6B</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_124">
+  <IconStyle>
+    <color>cc8FFF6F</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_125">
+  <IconStyle>
+    <color>cc8BFF73</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_126">
+  <IconStyle>
+    <color>cc87FF77</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_127">
+  <IconStyle>
+    <color>cc83FF7B</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_128">
+  <IconStyle>
+    <color>cc7FFF7F</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_129">
+  <IconStyle>
+    <color>cc7BFF83</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_130">
+  <IconStyle>
+    <color>cc77FF87</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_131">
+  <IconStyle>
+    <color>cc73FF8B</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_132">
+  <IconStyle>
+    <color>cc6FFF8F</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_133">
+  <IconStyle>
+    <color>cc6BFF93</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_134">
+  <IconStyle>
+    <color>cc67FF97</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_135">
+  <IconStyle>
+    <color>cc63FF9B</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_136">
+  <IconStyle>
+    <color>cc5FFF9F</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_137">
+  <IconStyle>
+    <color>cc5BFFA3</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_138">
+  <IconStyle>
+    <color>cc57FFA7</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_139">
+  <IconStyle>
+    <color>cc53FFAB</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_140">
+  <IconStyle>
+    <color>cc4FFFAF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_141">
+  <IconStyle>
+    <color>cc4BFFB3</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_142">
+  <IconStyle>
+    <color>cc47FFB7</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_143">
+  <IconStyle>
+    <color>cc43FFBB</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_144">
+  <IconStyle>
+    <color>cc3FFFBF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_145">
+  <IconStyle>
+    <color>cc3BFFC3</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_146">
+  <IconStyle>
+    <color>cc37FFC7</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_147">
+  <IconStyle>
+    <color>cc33FFCB</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_148">
+  <IconStyle>
+    <color>cc2FFFCF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_149">
+  <IconStyle>
+    <color>cc2BFFD3</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_150">
+  <IconStyle>
+    <color>cc27FFD7</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_151">
+  <IconStyle>
+    <color>cc23FFDB</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_152">
+  <IconStyle>
+    <color>cc1FFFDF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_153">
+  <IconStyle>
+    <color>cc1BFFE3</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_154">
+  <IconStyle>
+    <color>cc17FFE7</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_155">
+  <IconStyle>
+    <color>cc13FFEB</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_156">
+  <IconStyle>
+    <color>cc0FFFEF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_157">
+  <IconStyle>
+    <color>cc0BFFF3</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_158">
+  <IconStyle>
+    <color>cc07FFF7</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_159">
+  <IconStyle>
+    <color>cc03FFFB</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_160">
+  <IconStyle>
+    <color>cc00FFFF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_161">
+  <IconStyle>
+    <color>cc00FBFF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_162">
+  <IconStyle>
+    <color>cc00F7FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_163">
+  <IconStyle>
+    <color>cc00F3FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_164">
+  <IconStyle>
+    <color>cc00EFFF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_165">
+  <IconStyle>
+    <color>cc00EBFF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_166">
+  <IconStyle>
+    <color>cc00E7FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_167">
+  <IconStyle>
+    <color>cc00E3FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_168">
+  <IconStyle>
+    <color>cc00DFFF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_169">
+  <IconStyle>
+    <color>cc00DBFF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_170">
+  <IconStyle>
+    <color>cc00D7FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_171">
+  <IconStyle>
+    <color>cc00D3FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_172">
+  <IconStyle>
+    <color>cc00CFFF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_173">
+  <IconStyle>
+    <color>cc00CBFF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_174">
+  <IconStyle>
+    <color>cc00C7FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_175">
+  <IconStyle>
+    <color>cc00C3FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_176">
+  <IconStyle>
+    <color>cc00BFFF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_177">
+  <IconStyle>
+    <color>cc00BBFF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_178">
+  <IconStyle>
+    <color>cc00B7FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_179">
+  <IconStyle>
+    <color>cc00B3FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_180">
+  <IconStyle>
+    <color>cc00AFFF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_181">
+  <IconStyle>
+    <color>cc00ABFF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_182">
+  <IconStyle>
+    <color>cc00A7FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_183">
+  <IconStyle>
+    <color>cc00A3FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_184">
+  <IconStyle>
+    <color>cc009FFF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_185">
+  <IconStyle>
+    <color>cc009BFF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_186">
+  <IconStyle>
+    <color>cc0097FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_187">
+  <IconStyle>
+    <color>cc0093FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_188">
+  <IconStyle>
+    <color>cc008FFF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_189">
+  <IconStyle>
+    <color>cc008BFF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_190">
+  <IconStyle>
+    <color>cc0087FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_191">
+  <IconStyle>
+    <color>cc0083FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_192">
+  <IconStyle>
+    <color>cc007FFF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_193">
+  <IconStyle>
+    <color>cc007BFF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_194">
+  <IconStyle>
+    <color>cc0077FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_195">
+  <IconStyle>
+    <color>cc0073FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_196">
+  <IconStyle>
+    <color>cc006FFF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_197">
+  <IconStyle>
+    <color>cc006BFF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_198">
+  <IconStyle>
+    <color>cc0067FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_199">
+  <IconStyle>
+    <color>cc0063FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_200">
+  <IconStyle>
+    <color>cc005FFF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_201">
+  <IconStyle>
+    <color>cc005BFF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_202">
+  <IconStyle>
+    <color>cc0057FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_203">
+  <IconStyle>
+    <color>cc0053FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_204">
+  <IconStyle>
+    <color>cc004FFF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_205">
+  <IconStyle>
+    <color>cc004BFF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_206">
+  <IconStyle>
+    <color>cc0047FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_207">
+  <IconStyle>
+    <color>cc0043FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_208">
+  <IconStyle>
+    <color>cc003FFF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_209">
+  <IconStyle>
+    <color>cc003BFF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_210">
+  <IconStyle>
+    <color>cc0037FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_211">
+  <IconStyle>
+    <color>cc0033FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_212">
+  <IconStyle>
+    <color>cc002FFF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_213">
+  <IconStyle>
+    <color>cc002BFF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_214">
+  <IconStyle>
+    <color>cc0027FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_215">
+  <IconStyle>
+    <color>cc0023FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_216">
+  <IconStyle>
+    <color>cc001FFF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_217">
+  <IconStyle>
+    <color>cc001BFF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_218">
+  <IconStyle>
+    <color>cc0017FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_219">
+  <IconStyle>
+    <color>cc0013FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_220">
+  <IconStyle>
+    <color>cc000FFF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_221">
+  <IconStyle>
+    <color>cc000BFF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_222">
+  <IconStyle>
+    <color>cc0007FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_223">
+  <IconStyle>
+    <color>cc0003FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_224">
+  <IconStyle>
+    <color>cc0000FF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_225">
+  <IconStyle>
+    <color>cc0000FB</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_226">
+  <IconStyle>
+    <color>cc0000F7</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_227">
+  <IconStyle>
+    <color>cc0000F3</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_228">
+  <IconStyle>
+    <color>cc0000EF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_229">
+  <IconStyle>
+    <color>cc0000EB</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_230">
+  <IconStyle>
+    <color>cc0000E7</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_231">
+  <IconStyle>
+    <color>cc0000E3</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_232">
+  <IconStyle>
+    <color>cc0000DF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_233">
+  <IconStyle>
+    <color>cc0000DB</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_234">
+  <IconStyle>
+    <color>cc0000D7</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_235">
+  <IconStyle>
+    <color>cc0000D3</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_236">
+  <IconStyle>
+    <color>cc0000CF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_237">
+  <IconStyle>
+    <color>cc0000CB</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_238">
+  <IconStyle>
+    <color>cc0000C7</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_239">
+  <IconStyle>
+    <color>cc0000C3</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_240">
+  <IconStyle>
+    <color>cc0000BF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_241">
+  <IconStyle>
+    <color>cc0000BB</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_242">
+  <IconStyle>
+    <color>cc0000B7</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_243">
+  <IconStyle>
+    <color>cc0000B3</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_244">
+  <IconStyle>
+    <color>cc0000AF</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_245">
+  <IconStyle>
+    <color>cc0000AB</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_246">
+  <IconStyle>
+    <color>cc0000A7</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_247">
+  <IconStyle>
+    <color>cc0000A3</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_248">
+  <IconStyle>
+    <color>cc00009F</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_249">
+  <IconStyle>
+    <color>cc00009B</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_250">
+  <IconStyle>
+    <color>cc000097</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_251">
+  <IconStyle>
+    <color>cc000093</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_252">
+  <IconStyle>
+    <color>cc00008F</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_253">
+  <IconStyle>
+    <color>cc00008B</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_254">
+  <IconStyle>
+    <color>cc000087</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_255">
+  <IconStyle>
+    <color>cc000083</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Style id="heatmapEstilo_256">
+  <IconStyle>
+    <color>cc00007F</color>
+    <scale>1.5</scale>
+    <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+  </IconStyle>
+</Style>
+<Folder><name>Mapa de Calor - Radiacion</name>
+<Placemark>
+  <name>Radiacion: 26.65</name>
+  <styleUrl>#heatmapEstilo_144</styleUrl>
+  <Point><coordinates>-79.468185,-1.013049,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.93</name>
+  <styleUrl>#heatmapEstilo_118</styleUrl>
+  <Point><coordinates>-79.468146,-1.013033,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.23</name>
+  <styleUrl>#heatmapEstilo_101</styleUrl>
+  <Point><coordinates>-79.468113,-1.012994,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 25.98</name>
+  <styleUrl>#heatmapEstilo_137</styleUrl>
+  <Point><coordinates>-79.468086,-1.012963,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 26.37</name>
+  <styleUrl>#heatmapEstilo_141</styleUrl>
+  <Point><coordinates>-79.468049,-1.012957,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 28.13</name>
+  <styleUrl>#heatmapEstilo_158</styleUrl>
+  <Point><coordinates>-79.468009,-1.012932,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 28.04</name>
+  <styleUrl>#heatmapEstilo_157</styleUrl>
+  <Point><coordinates>-79.467978,-1.012892,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 29.36</name>
+  <styleUrl>#heatmapEstilo_170</styleUrl>
+  <Point><coordinates>-79.467969,-1.012872,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 28.75</name>
+  <styleUrl>#heatmapEstilo_164</styleUrl>
+  <Point><coordinates>-79.467935,-1.012861,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 24.98</name>
+  <styleUrl>#heatmapEstilo_128</styleUrl>
+  <Point><coordinates>-79.467927,-1.012818,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 25.55</name>
+  <styleUrl>#heatmapEstilo_133</styleUrl>
+  <Point><coordinates>-79.467916,-1.012782,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 27.93</name>
+  <styleUrl>#heatmapEstilo_156</styleUrl>
+  <Point><coordinates>-79.467891,-1.012751,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 30.40</name>
+  <styleUrl>#heatmapEstilo_180</styleUrl>
+  <Point><coordinates>-79.467868,-1.012726,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.93</name>
+  <styleUrl>#heatmapEstilo_194</styleUrl>
+  <Point><coordinates>-79.467846,-1.012684,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 36.10</name>
+  <styleUrl>#heatmapEstilo_234</styleUrl>
+  <Point><coordinates>-79.467822,-1.012672,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 32.21</name>
+  <styleUrl>#heatmapEstilo_197</styleUrl>
+  <Point><coordinates>-79.467794,-1.012661,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 11.74</name>
+  <styleUrl>#heatmapEstilo_1</styleUrl>
+  <Point><coordinates>-79.467770,-1.012653,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 33.79</name>
+  <styleUrl>#heatmapEstilo_212</styleUrl>
+  <Point><coordinates>-79.467722,-1.012658,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 35.83</name>
+  <styleUrl>#heatmapEstilo_232</styleUrl>
+  <Point><coordinates>-79.467674,-1.012668,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 33.75</name>
+  <styleUrl>#heatmapEstilo_212</styleUrl>
+  <Point><coordinates>-79.467640,-1.012685,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 28.22</name>
+  <styleUrl>#heatmapEstilo_159</styleUrl>
+  <Point><coordinates>-79.467595,-1.012699,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 28.51</name>
+  <styleUrl>#heatmapEstilo_161</styleUrl>
+  <Point><coordinates>-79.467548,-1.012703,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 34.48</name>
+  <styleUrl>#heatmapEstilo_219</styleUrl>
+  <Point><coordinates>-79.467503,-1.012714,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 38.30</name>
+  <styleUrl>#heatmapEstilo_256</styleUrl>
+  <Point><coordinates>-79.467472,-1.012702,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.66</name>
+  <styleUrl>#heatmapEstilo_192</styleUrl>
+  <Point><coordinates>-79.467426,-1.012708,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 27.00</name>
+  <styleUrl>#heatmapEstilo_147</styleUrl>
+  <Point><coordinates>-79.467378,-1.012717,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 35.33</name>
+  <styleUrl>#heatmapEstilo_227</styleUrl>
+  <Point><coordinates>-79.467336,-1.012689,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 33.48</name>
+  <styleUrl>#heatmapEstilo_209</styleUrl>
+  <Point><coordinates>-79.467325,-1.012643,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 28.16</name>
+  <styleUrl>#heatmapEstilo_158</styleUrl>
+  <Point><coordinates>-79.467339,-1.012599,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 26.53</name>
+  <styleUrl>#heatmapEstilo_142</styleUrl>
+  <Point><coordinates>-79.467363,-1.012583,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 27.07</name>
+  <styleUrl>#heatmapEstilo_148</styleUrl>
+  <Point><coordinates>-79.467395,-1.012581,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 28.00</name>
+  <styleUrl>#heatmapEstilo_157</styleUrl>
+  <Point><coordinates>-79.467449,-1.012593,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 29.31</name>
+  <styleUrl>#heatmapEstilo_169</styleUrl>
+  <Point><coordinates>-79.467490,-1.012603,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 30.75</name>
+  <styleUrl>#heatmapEstilo_183</styleUrl>
+  <Point><coordinates>-79.467527,-1.012612,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 32.84</name>
+  <styleUrl>#heatmapEstilo_203</styleUrl>
+  <Point><coordinates>-79.467566,-1.012596,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 32.53</name>
+  <styleUrl>#heatmapEstilo_200</styleUrl>
+  <Point><coordinates>-79.467610,-1.012617,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 32.02</name>
+  <styleUrl>#heatmapEstilo_195</styleUrl>
+  <Point><coordinates>-79.467647,-1.012619,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 30.89</name>
+  <styleUrl>#heatmapEstilo_184</styleUrl>
+  <Point><coordinates>-79.467687,-1.012581,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 30.83</name>
+  <styleUrl>#heatmapEstilo_184</styleUrl>
+  <Point><coordinates>-79.467727,-1.012554,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 30.49</name>
+  <styleUrl>#heatmapEstilo_181</styleUrl>
+  <Point><coordinates>-79.467764,-1.012521,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.27</name>
+  <styleUrl>#heatmapEstilo_188</styleUrl>
+  <Point><coordinates>-79.467809,-1.012495,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.62</name>
+  <styleUrl>#heatmapEstilo_191</styleUrl>
+  <Point><coordinates>-79.467845,-1.012486,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 29.66</name>
+  <styleUrl>#heatmapEstilo_173</styleUrl>
+  <Point><coordinates>-79.467882,-1.012485,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 28.42</name>
+  <styleUrl>#heatmapEstilo_161</styleUrl>
+  <Point><coordinates>-79.467948,-1.012518,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 25.27</name>
+  <styleUrl>#heatmapEstilo_130</styleUrl>
+  <Point><coordinates>-79.467994,-1.012542,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 25.10</name>
+  <styleUrl>#heatmapEstilo_129</styleUrl>
+  <Point><coordinates>-79.468034,-1.012557,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 26.89</name>
+  <styleUrl>#heatmapEstilo_146</styleUrl>
+  <Point><coordinates>-79.468077,-1.012557,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 28.29</name>
+  <styleUrl>#heatmapEstilo_159</styleUrl>
+  <Point><coordinates>-79.468123,-1.012568,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 29.53</name>
+  <styleUrl>#heatmapEstilo_171</styleUrl>
+  <Point><coordinates>-79.468167,-1.012553,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 29.87</name>
+  <styleUrl>#heatmapEstilo_175</styleUrl>
+  <Point><coordinates>-79.468208,-1.012549,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 29.91</name>
+  <styleUrl>#heatmapEstilo_175</styleUrl>
+  <Point><coordinates>-79.468201,-1.012558,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 33.33</name>
+  <styleUrl>#heatmapEstilo_208</styleUrl>
+  <Point><coordinates>-79.468213,-1.012574,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 32.45</name>
+  <styleUrl>#heatmapEstilo_199</styleUrl>
+  <Point><coordinates>-79.468212,-1.012569,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 32.14</name>
+  <styleUrl>#heatmapEstilo_196</styleUrl>
+  <Point><coordinates>-79.468209,-1.012571,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 32.09</name>
+  <styleUrl>#heatmapEstilo_196</styleUrl>
+  <Point><coordinates>-79.468215,-1.012575,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.53</name>
+  <styleUrl>#heatmapEstilo_190</styleUrl>
+  <Point><coordinates>-79.468237,-1.012579,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 30.64</name>
+  <styleUrl>#heatmapEstilo_182</styleUrl>
+  <Point><coordinates>-79.468300,-1.012594,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 29.19</name>
+  <styleUrl>#heatmapEstilo_168</styleUrl>
+  <Point><coordinates>-79.468352,-1.012567,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 28.36</name>
+  <styleUrl>#heatmapEstilo_160</styleUrl>
+  <Point><coordinates>-79.468397,-1.012568,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 30.05</name>
+  <styleUrl>#heatmapEstilo_176</styleUrl>
+  <Point><coordinates>-79.468444,-1.012585,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.18</name>
+  <styleUrl>#heatmapEstilo_187</styleUrl>
+  <Point><coordinates>-79.468492,-1.012589,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.71</name>
+  <styleUrl>#heatmapEstilo_192</styleUrl>
+  <Point><coordinates>-79.468542,-1.012587,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.78</name>
+  <styleUrl>#heatmapEstilo_193</styleUrl>
+  <Point><coordinates>-79.468583,-1.012582,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.57</name>
+  <styleUrl>#heatmapEstilo_191</styleUrl>
+  <Point><coordinates>-79.468625,-1.012582,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.28</name>
+  <styleUrl>#heatmapEstilo_188</styleUrl>
+  <Point><coordinates>-79.468656,-1.012557,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.48</name>
+  <styleUrl>#heatmapEstilo_190</styleUrl>
+  <Point><coordinates>-79.468652,-1.012527,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.77</name>
+  <styleUrl>#heatmapEstilo_193</styleUrl>
+  <Point><coordinates>-79.468688,-1.012495,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.78</name>
+  <styleUrl>#heatmapEstilo_193</styleUrl>
+  <Point><coordinates>-79.468733,-1.012487,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.78</name>
+  <styleUrl>#heatmapEstilo_193</styleUrl>
+  <Point><coordinates>-79.468780,-1.012482,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 32.01</name>
+  <styleUrl>#heatmapEstilo_195</styleUrl>
+  <Point><coordinates>-79.468830,-1.012465,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.93</name>
+  <styleUrl>#heatmapEstilo_194</styleUrl>
+  <Point><coordinates>-79.468876,-1.012443,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.79</name>
+  <styleUrl>#heatmapEstilo_193</styleUrl>
+  <Point><coordinates>-79.468917,-1.012414,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.41</name>
+  <styleUrl>#heatmapEstilo_189</styleUrl>
+  <Point><coordinates>-79.468975,-1.012415,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.65</name>
+  <styleUrl>#heatmapEstilo_192</styleUrl>
+  <Point><coordinates>-79.469011,-1.012403,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.78</name>
+  <styleUrl>#heatmapEstilo_193</styleUrl>
+  <Point><coordinates>-79.469044,-1.012392,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.89</name>
+  <styleUrl>#heatmapEstilo_194</styleUrl>
+  <Point><coordinates>-79.469081,-1.012410,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.88</name>
+  <styleUrl>#heatmapEstilo_194</styleUrl>
+  <Point><coordinates>-79.469123,-1.012416,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.81</name>
+  <styleUrl>#heatmapEstilo_193</styleUrl>
+  <Point><coordinates>-79.469177,-1.012408,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.79</name>
+  <styleUrl>#heatmapEstilo_193</styleUrl>
+  <Point><coordinates>-79.469223,-1.012431,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.59</name>
+  <styleUrl>#heatmapEstilo_191</styleUrl>
+  <Point><coordinates>-79.469270,-1.012412,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.77</name>
+  <styleUrl>#heatmapEstilo_193</styleUrl>
+  <Point><coordinates>-79.469306,-1.012397,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.59</name>
+  <styleUrl>#heatmapEstilo_191</styleUrl>
+  <Point><coordinates>-79.469343,-1.012396,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.27</name>
+  <styleUrl>#heatmapEstilo_188</styleUrl>
+  <Point><coordinates>-79.469387,-1.012376,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 30.91</name>
+  <styleUrl>#heatmapEstilo_185</styleUrl>
+  <Point><coordinates>-79.469432,-1.012390,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 30.91</name>
+  <styleUrl>#heatmapEstilo_184</styleUrl>
+  <Point><coordinates>-79.469479,-1.012398,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 30.98</name>
+  <styleUrl>#heatmapEstilo_185</styleUrl>
+  <Point><coordinates>-79.469522,-1.012384,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.12</name>
+  <styleUrl>#heatmapEstilo_187</styleUrl>
+  <Point><coordinates>-79.469562,-1.012372,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.38</name>
+  <styleUrl>#heatmapEstilo_189</styleUrl>
+  <Point><coordinates>-79.469587,-1.012382,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 30.81</name>
+  <styleUrl>#heatmapEstilo_184</styleUrl>
+  <Point><coordinates>-79.469598,-1.012388,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.34</name>
+  <styleUrl>#heatmapEstilo_189</styleUrl>
+  <Point><coordinates>-79.469594,-1.012396,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.09</name>
+  <styleUrl>#heatmapEstilo_186</styleUrl>
+  <Point><coordinates>-79.469578,-1.012396,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 30.70</name>
+  <styleUrl>#heatmapEstilo_183</styleUrl>
+  <Point><coordinates>-79.469556,-1.012400,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.46</name>
+  <styleUrl>#heatmapEstilo_190</styleUrl>
+  <Point><coordinates>-79.469552,-1.012399,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 30.84</name>
+  <styleUrl>#heatmapEstilo_184</styleUrl>
+  <Point><coordinates>-79.469555,-1.012404,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 30.76</name>
+  <styleUrl>#heatmapEstilo_183</styleUrl>
+  <Point><coordinates>-79.469558,-1.012404,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 30.04</name>
+  <styleUrl>#heatmapEstilo_176</styleUrl>
+  <Point><coordinates>-79.469561,-1.012407,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 29.46</name>
+  <styleUrl>#heatmapEstilo_171</styleUrl>
+  <Point><coordinates>-79.469549,-1.012412,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 29.84</name>
+  <styleUrl>#heatmapEstilo_174</styleUrl>
+  <Point><coordinates>-79.469569,-1.012404,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 30.33</name>
+  <styleUrl>#heatmapEstilo_179</styleUrl>
+  <Point><coordinates>-79.469561,-1.012404,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 32.03</name>
+  <styleUrl>#heatmapEstilo_195</styleUrl>
+  <Point><coordinates>-79.469559,-1.012403,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 30.51</name>
+  <styleUrl>#heatmapEstilo_181</styleUrl>
+  <Point><coordinates>-79.469556,-1.012408,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 26.51</name>
+  <styleUrl>#heatmapEstilo_142</styleUrl>
+  <Point><coordinates>-79.469554,-1.012417,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 27.84</name>
+  <styleUrl>#heatmapEstilo_155</styleUrl>
+  <Point><coordinates>-79.469557,-1.012406,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 29.72</name>
+  <styleUrl>#heatmapEstilo_173</styleUrl>
+  <Point><coordinates>-79.469557,-1.012363,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 30.27</name>
+  <styleUrl>#heatmapEstilo_178</styleUrl>
+  <Point><coordinates>-79.469566,-1.012298,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 28.54</name>
+  <styleUrl>#heatmapEstilo_162</styleUrl>
+  <Point><coordinates>-79.469572,-1.012287,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.74</name>
+  <styleUrl>#heatmapEstilo_106</styleUrl>
+  <Point><coordinates>-79.469576,-1.012329,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.05</name>
+  <styleUrl>#heatmapEstilo_109</styleUrl>
+  <Point><coordinates>-79.469572,-1.012323,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.85</name>
+  <styleUrl>#heatmapEstilo_107</styleUrl>
+  <Point><coordinates>-79.469599,-1.012316,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.49</name>
+  <styleUrl>#heatmapEstilo_104</styleUrl>
+  <Point><coordinates>-79.469655,-1.012319,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 24.47</name>
+  <styleUrl>#heatmapEstilo_123</styleUrl>
+  <Point><coordinates>-79.469722,-1.012346,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 24.88</name>
+  <styleUrl>#heatmapEstilo_127</styleUrl>
+  <Point><coordinates>-79.469768,-1.012338,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.47</name>
+  <styleUrl>#heatmapEstilo_113</styleUrl>
+  <Point><coordinates>-79.469810,-1.012365,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.36</name>
+  <styleUrl>#heatmapEstilo_112</styleUrl>
+  <Point><coordinates>-79.469847,-1.012395,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.79</name>
+  <styleUrl>#heatmapEstilo_107</styleUrl>
+  <Point><coordinates>-79.469895,-1.012422,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 21.96</name>
+  <styleUrl>#heatmapEstilo_99</styleUrl>
+  <Point><coordinates>-79.469950,-1.012414,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.46</name>
+  <styleUrl>#heatmapEstilo_103</styleUrl>
+  <Point><coordinates>-79.470025,-1.012393,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.03</name>
+  <styleUrl>#heatmapEstilo_109</styleUrl>
+  <Point><coordinates>-79.470072,-1.012382,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.05</name>
+  <styleUrl>#heatmapEstilo_109</styleUrl>
+  <Point><coordinates>-79.470105,-1.012385,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.16</name>
+  <styleUrl>#heatmapEstilo_110</styleUrl>
+  <Point><coordinates>-79.470135,-1.012397,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.90</name>
+  <styleUrl>#heatmapEstilo_108</styleUrl>
+  <Point><coordinates>-79.470174,-1.012406,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.71</name>
+  <styleUrl>#heatmapEstilo_106</styleUrl>
+  <Point><coordinates>-79.470223,-1.012398,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.96</name>
+  <styleUrl>#heatmapEstilo_108</styleUrl>
+  <Point><coordinates>-79.470264,-1.012389,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.30</name>
+  <styleUrl>#heatmapEstilo_111</styleUrl>
+  <Point><coordinates>-79.470300,-1.012396,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.91</name>
+  <styleUrl>#heatmapEstilo_108</styleUrl>
+  <Point><coordinates>-79.470336,-1.012395,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.32</name>
+  <styleUrl>#heatmapEstilo_112</styleUrl>
+  <Point><coordinates>-79.470368,-1.012390,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.75</name>
+  <styleUrl>#heatmapEstilo_106</styleUrl>
+  <Point><coordinates>-79.470415,-1.012371,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.83</name>
+  <styleUrl>#heatmapEstilo_107</styleUrl>
+  <Point><coordinates>-79.470461,-1.012366,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.54</name>
+  <styleUrl>#heatmapEstilo_114</styleUrl>
+  <Point><coordinates>-79.470500,-1.012370,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.33</name>
+  <styleUrl>#heatmapEstilo_112</styleUrl>
+  <Point><coordinates>-79.470561,-1.012394,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.50</name>
+  <styleUrl>#heatmapEstilo_113</styleUrl>
+  <Point><coordinates>-79.470601,-1.012403,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.46</name>
+  <styleUrl>#heatmapEstilo_113</styleUrl>
+  <Point><coordinates>-79.470647,-1.012375,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.69</name>
+  <styleUrl>#heatmapEstilo_106</styleUrl>
+  <Point><coordinates>-79.470692,-1.012364,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.17</name>
+  <styleUrl>#heatmapEstilo_110</styleUrl>
+  <Point><coordinates>-79.470736,-1.012372,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.65</name>
+  <styleUrl>#heatmapEstilo_105</styleUrl>
+  <Point><coordinates>-79.470776,-1.012387,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.14</name>
+  <styleUrl>#heatmapEstilo_110</styleUrl>
+  <Point><coordinates>-79.470818,-1.012404,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.02</name>
+  <styleUrl>#heatmapEstilo_109</styleUrl>
+  <Point><coordinates>-79.470868,-1.012415,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.96</name>
+  <styleUrl>#heatmapEstilo_108</styleUrl>
+  <Point><coordinates>-79.470883,-1.012407,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.81</name>
+  <styleUrl>#heatmapEstilo_107</styleUrl>
+  <Point><coordinates>-79.470936,-1.012418,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.30</name>
+  <styleUrl>#heatmapEstilo_112</styleUrl>
+  <Point><coordinates>-79.470979,-1.012418,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.83</name>
+  <styleUrl>#heatmapEstilo_107</styleUrl>
+  <Point><coordinates>-79.471044,-1.012412,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.12</name>
+  <styleUrl>#heatmapEstilo_110</styleUrl>
+  <Point><coordinates>-79.471089,-1.012397,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.15</name>
+  <styleUrl>#heatmapEstilo_100</styleUrl>
+  <Point><coordinates>-79.471137,-1.012388,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 21.31</name>
+  <styleUrl>#heatmapEstilo_92</styleUrl>
+  <Point><coordinates>-79.471182,-1.012387,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.15</name>
+  <styleUrl>#heatmapEstilo_100</styleUrl>
+  <Point><coordinates>-79.471215,-1.012372,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.17</name>
+  <styleUrl>#heatmapEstilo_101</styleUrl>
+  <Point><coordinates>-79.471221,-1.012360,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.44</name>
+  <styleUrl>#heatmapEstilo_103</styleUrl>
+  <Point><coordinates>-79.471235,-1.012355,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.20</name>
+  <styleUrl>#heatmapEstilo_101</styleUrl>
+  <Point><coordinates>-79.471268,-1.012332,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 21.83</name>
+  <styleUrl>#heatmapEstilo_97</styleUrl>
+  <Point><coordinates>-79.471277,-1.012339,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.09</name>
+  <styleUrl>#heatmapEstilo_100</styleUrl>
+  <Point><coordinates>-79.471324,-1.012340,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.51</name>
+  <styleUrl>#heatmapEstilo_104</styleUrl>
+  <Point><coordinates>-79.471374,-1.012338,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.28</name>
+  <styleUrl>#heatmapEstilo_102</styleUrl>
+  <Point><coordinates>-79.471405,-1.012329,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 21.48</name>
+  <styleUrl>#heatmapEstilo_94</styleUrl>
+  <Point><coordinates>-79.471467,-1.012324,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.16</name>
+  <styleUrl>#heatmapEstilo_101</styleUrl>
+  <Point><coordinates>-79.471516,-1.012350,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.01</name>
+  <styleUrl>#heatmapEstilo_109</styleUrl>
+  <Point><coordinates>-79.471533,-1.012377,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.28</name>
+  <styleUrl>#heatmapEstilo_111</styleUrl>
+  <Point><coordinates>-79.471545,-1.012404,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.15</name>
+  <styleUrl>#heatmapEstilo_110</styleUrl>
+  <Point><coordinates>-79.471576,-1.012352,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.17</name>
+  <styleUrl>#heatmapEstilo_110</styleUrl>
+  <Point><coordinates>-79.471564,-1.012407,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.63</name>
+  <styleUrl>#heatmapEstilo_105</styleUrl>
+  <Point><coordinates>-79.471547,-1.012481,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.97</name>
+  <styleUrl>#heatmapEstilo_108</styleUrl>
+  <Point><coordinates>-79.471532,-1.012541,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.30</name>
+  <styleUrl>#heatmapEstilo_111</styleUrl>
+  <Point><coordinates>-79.471510,-1.012572,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.77</name>
+  <styleUrl>#heatmapEstilo_106</styleUrl>
+  <Point><coordinates>-79.471469,-1.012584,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.48</name>
+  <styleUrl>#heatmapEstilo_104</styleUrl>
+  <Point><coordinates>-79.471434,-1.012595,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.52</name>
+  <styleUrl>#heatmapEstilo_104</styleUrl>
+  <Point><coordinates>-79.471484,-1.012660,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.23</name>
+  <styleUrl>#heatmapEstilo_101</styleUrl>
+  <Point><coordinates>-79.471432,-1.012705,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.15</name>
+  <styleUrl>#heatmapEstilo_100</styleUrl>
+  <Point><coordinates>-79.471398,-1.012706,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.48</name>
+  <styleUrl>#heatmapEstilo_104</styleUrl>
+  <Point><coordinates>-79.471356,-1.012719,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.23</name>
+  <styleUrl>#heatmapEstilo_101</styleUrl>
+  <Point><coordinates>-79.471300,-1.012705,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.75</name>
+  <styleUrl>#heatmapEstilo_106</styleUrl>
+  <Point><coordinates>-79.471250,-1.012701,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.88</name>
+  <styleUrl>#heatmapEstilo_107</styleUrl>
+  <Point><coordinates>-79.471210,-1.012614,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.04</name>
+  <styleUrl>#heatmapEstilo_109</styleUrl>
+  <Point><coordinates>-79.471193,-1.012550,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.13</name>
+  <styleUrl>#heatmapEstilo_110</styleUrl>
+  <Point><coordinates>-79.471155,-1.012503,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.01</name>
+  <styleUrl>#heatmapEstilo_109</styleUrl>
+  <Point><coordinates>-79.471080,-1.012490,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.63</name>
+  <styleUrl>#heatmapEstilo_105</styleUrl>
+  <Point><coordinates>-79.471026,-1.012486,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.03</name>
+  <styleUrl>#heatmapEstilo_99</styleUrl>
+  <Point><coordinates>-79.470973,-1.012485,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 21.75</name>
+  <styleUrl>#heatmapEstilo_97</styleUrl>
+  <Point><coordinates>-79.470926,-1.012489,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 21.57</name>
+  <styleUrl>#heatmapEstilo_95</styleUrl>
+  <Point><coordinates>-79.470890,-1.012510,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.02</name>
+  <styleUrl>#heatmapEstilo_99</styleUrl>
+  <Point><coordinates>-79.470893,-1.012561,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.98</name>
+  <styleUrl>#heatmapEstilo_108</styleUrl>
+  <Point><coordinates>-79.470936,-1.012653,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.39</name>
+  <styleUrl>#heatmapEstilo_112</styleUrl>
+  <Point><coordinates>-79.470949,-1.012690,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.57</name>
+  <styleUrl>#heatmapEstilo_114</styleUrl>
+  <Point><coordinates>-79.470954,-1.012727,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.94</name>
+  <styleUrl>#heatmapEstilo_118</styleUrl>
+  <Point><coordinates>-79.471018,-1.012754,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 24.44</name>
+  <styleUrl>#heatmapEstilo_122</styleUrl>
+  <Point><coordinates>-79.471012,-1.012786,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.15</name>
+  <styleUrl>#heatmapEstilo_110</styleUrl>
+  <Point><coordinates>-79.471020,-1.012822,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 21.85</name>
+  <styleUrl>#heatmapEstilo_98</styleUrl>
+  <Point><coordinates>-79.470909,-1.012813,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.00</name>
+  <styleUrl>#heatmapEstilo_99</styleUrl>
+  <Point><coordinates>-79.470858,-1.012811,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 21.73</name>
+  <styleUrl>#heatmapEstilo_96</styleUrl>
+  <Point><coordinates>-79.470817,-1.012800,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.35</name>
+  <styleUrl>#heatmapEstilo_102</styleUrl>
+  <Point><coordinates>-79.470794,-1.012789,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.72</name>
+  <styleUrl>#heatmapEstilo_106</styleUrl>
+  <Point><coordinates>-79.470773,-1.012763,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.59</name>
+  <styleUrl>#heatmapEstilo_114</styleUrl>
+  <Point><coordinates>-79.470786,-1.012771,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 24.21</name>
+  <styleUrl>#heatmapEstilo_120</styleUrl>
+  <Point><coordinates>-79.470783,-1.012771,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 24.21</name>
+  <styleUrl>#heatmapEstilo_120</styleUrl>
+  <Point><coordinates>-79.470790,-1.012778,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.21</name>
+  <styleUrl>#heatmapEstilo_111</styleUrl>
+  <Point><coordinates>-79.470818,-1.012798,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.16</name>
+  <styleUrl>#heatmapEstilo_110</styleUrl>
+  <Point><coordinates>-79.470818,-1.012798,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.26</name>
+  <styleUrl>#heatmapEstilo_111</styleUrl>
+  <Point><coordinates>-79.470818,-1.012798,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.23</name>
+  <styleUrl>#heatmapEstilo_111</styleUrl>
+  <Point><coordinates>-79.470800,-1.012840,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.16</name>
+  <styleUrl>#heatmapEstilo_110</styleUrl>
+  <Point><coordinates>-79.470798,-1.012843,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 21.46</name>
+  <styleUrl>#heatmapEstilo_94</styleUrl>
+  <Point><coordinates>-79.470798,-1.012843,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 21.14</name>
+  <styleUrl>#heatmapEstilo_91</styleUrl>
+  <Point><coordinates>-79.470798,-1.012843,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.13</name>
+  <styleUrl>#heatmapEstilo_100</styleUrl>
+  <Point><coordinates>-79.470798,-1.012843,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 16.91</name>
+  <styleUrl>#heatmapEstilo_50</styleUrl>
+  <Point><coordinates>-79.470754,-1.012835,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 32.75</name>
+  <styleUrl>#heatmapEstilo_202</styleUrl>
+  <Point><coordinates>-79.470712,-1.012843,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 27.11</name>
+  <styleUrl>#heatmapEstilo_148</styleUrl>
+  <Point><coordinates>-79.470677,-1.012842,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 36.98</name>
+  <styleUrl>#heatmapEstilo_243</styleUrl>
+  <Point><coordinates>-79.470641,-1.012851,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 32.96</name>
+  <styleUrl>#heatmapEstilo_204</styleUrl>
+  <Point><coordinates>-79.470593,-1.012847,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 17.49</name>
+  <styleUrl>#heatmapEstilo_56</styleUrl>
+  <Point><coordinates>-79.470548,-1.012833,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 13.46</name>
+  <styleUrl>#heatmapEstilo_17</styleUrl>
+  <Point><coordinates>-79.470502,-1.012831,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 21.26</name>
+  <styleUrl>#heatmapEstilo_92</styleUrl>
+  <Point><coordinates>-79.470467,-1.012845,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 14.08</name>
+  <styleUrl>#heatmapEstilo_23</styleUrl>
+  <Point><coordinates>-79.470445,-1.012858,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 34.90</name>
+  <styleUrl>#heatmapEstilo_223</styleUrl>
+  <Point><coordinates>-79.470409,-1.012865,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 14.26</name>
+  <styleUrl>#heatmapEstilo_25</styleUrl>
+  <Point><coordinates>-79.470373,-1.012857,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 20.97</name>
+  <styleUrl>#heatmapEstilo_89</styleUrl>
+  <Point><coordinates>-79.470343,-1.012855,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 16.76</name>
+  <styleUrl>#heatmapEstilo_49</styleUrl>
+  <Point><coordinates>-79.470310,-1.012866,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 34.78</name>
+  <styleUrl>#heatmapEstilo_222</styleUrl>
+  <Point><coordinates>-79.470272,-1.012863,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 26.38</name>
+  <styleUrl>#heatmapEstilo_141</styleUrl>
+  <Point><coordinates>-79.470229,-1.012869,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 12.35</name>
+  <styleUrl>#heatmapEstilo_6</styleUrl>
+  <Point><coordinates>-79.470159,-1.012881,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.25</name>
+  <styleUrl>#heatmapEstilo_111</styleUrl>
+  <Point><coordinates>-79.470114,-1.012887,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 34.90</name>
+  <styleUrl>#heatmapEstilo_223</styleUrl>
+  <Point><coordinates>-79.470086,-1.012885,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 35.15</name>
+  <styleUrl>#heatmapEstilo_225</styleUrl>
+  <Point><coordinates>-79.470044,-1.012889,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 12.30</name>
+  <styleUrl>#heatmapEstilo_6</styleUrl>
+  <Point><coordinates>-79.470009,-1.012892,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 12.92</name>
+  <styleUrl>#heatmapEstilo_12</styleUrl>
+  <Point><coordinates>-79.469983,-1.012891,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 14.67</name>
+  <styleUrl>#heatmapEstilo_29</styleUrl>
+  <Point><coordinates>-79.469941,-1.012882,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 12.92</name>
+  <styleUrl>#heatmapEstilo_12</styleUrl>
+  <Point><coordinates>-79.469902,-1.012899,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 37.51</name>
+  <styleUrl>#heatmapEstilo_248</styleUrl>
+  <Point><coordinates>-79.469868,-1.012896,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 13.96</name>
+  <styleUrl>#heatmapEstilo_22</styleUrl>
+  <Point><coordinates>-79.469833,-1.012907,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 11.81</name>
+  <styleUrl>#heatmapEstilo_1</styleUrl>
+  <Point><coordinates>-79.469777,-1.012909,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 29.99</name>
+  <styleUrl>#heatmapEstilo_176</styleUrl>
+  <Point><coordinates>-79.469732,-1.012915,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 28.38</name>
+  <styleUrl>#heatmapEstilo_160</styleUrl>
+  <Point><coordinates>-79.469692,-1.012917,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.95</name>
+  <styleUrl>#heatmapEstilo_118</styleUrl>
+  <Point><coordinates>-79.469655,-1.012923,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 28.70</name>
+  <styleUrl>#heatmapEstilo_163</styleUrl>
+  <Point><coordinates>-79.469628,-1.012926,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 25.10</name>
+  <styleUrl>#heatmapEstilo_129</styleUrl>
+  <Point><coordinates>-79.469583,-1.012934,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 34.88</name>
+  <styleUrl>#heatmapEstilo_223</styleUrl>
+  <Point><coordinates>-79.469540,-1.012935,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 26.53</name>
+  <styleUrl>#heatmapEstilo_143</styleUrl>
+  <Point><coordinates>-79.469507,-1.012934,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 18.29</name>
+  <styleUrl>#heatmapEstilo_63</styleUrl>
+  <Point><coordinates>-79.469462,-1.012933,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 14.19</name>
+  <styleUrl>#heatmapEstilo_24</styleUrl>
+  <Point><coordinates>-79.469430,-1.012936,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 24.95</name>
+  <styleUrl>#heatmapEstilo_127</styleUrl>
+  <Point><coordinates>-79.469398,-1.012938,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 35.28</name>
+  <styleUrl>#heatmapEstilo_226</styleUrl>
+  <Point><coordinates>-79.469348,-1.012931,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 20.89</name>
+  <styleUrl>#heatmapEstilo_88</styleUrl>
+  <Point><coordinates>-79.469305,-1.012938,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 33.52</name>
+  <styleUrl>#heatmapEstilo_210</styleUrl>
+  <Point><coordinates>-79.469266,-1.012935,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 18.10</name>
+  <styleUrl>#heatmapEstilo_62</styleUrl>
+  <Point><coordinates>-79.469230,-1.012937,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 23.83</name>
+  <styleUrl>#heatmapEstilo_117</styleUrl>
+  <Point><coordinates>-79.469173,-1.012947,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 36.59</name>
+  <styleUrl>#heatmapEstilo_239</styleUrl>
+  <Point><coordinates>-79.469132,-1.012950,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 21.84</name>
+  <styleUrl>#heatmapEstilo_97</styleUrl>
+  <Point><coordinates>-79.469097,-1.012950,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 24.84</name>
+  <styleUrl>#heatmapEstilo_126</styleUrl>
+  <Point><coordinates>-79.469056,-1.012945,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 33.79</name>
+  <styleUrl>#heatmapEstilo_212</styleUrl>
+  <Point><coordinates>-79.469013,-1.012956,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 25.94</name>
+  <styleUrl>#heatmapEstilo_137</styleUrl>
+  <Point><coordinates>-79.468973,-1.012960,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 32.03</name>
+  <styleUrl>#heatmapEstilo_195</styleUrl>
+  <Point><coordinates>-79.468949,-1.012967,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 15.84</name>
+  <styleUrl>#heatmapEstilo_40</styleUrl>
+  <Point><coordinates>-79.468896,-1.012970,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 22.98</name>
+  <styleUrl>#heatmapEstilo_108</styleUrl>
+  <Point><coordinates>-79.468867,-1.012986,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 30.50</name>
+  <styleUrl>#heatmapEstilo_181</styleUrl>
+  <Point><coordinates>-79.468835,-1.012993,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 21.38</name>
+  <styleUrl>#heatmapEstilo_93</styleUrl>
+  <Point><coordinates>-79.468786,-1.012988,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 35.56</name>
+  <styleUrl>#heatmapEstilo_229</styleUrl>
+  <Point><coordinates>-79.468742,-1.012981,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 20.61</name>
+  <styleUrl>#heatmapEstilo_86</styleUrl>
+  <Point><coordinates>-79.468690,-1.012980,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 31.69</name>
+  <styleUrl>#heatmapEstilo_192</styleUrl>
+  <Point><coordinates>-79.468647,-1.012977,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 30.21</name>
+  <styleUrl>#heatmapEstilo_178</styleUrl>
+  <Point><coordinates>-79.468595,-1.012975,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 12.34</name>
+  <styleUrl>#heatmapEstilo_6</styleUrl>
+  <Point><coordinates>-79.468540,-1.012987,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 34.81</name>
+  <styleUrl>#heatmapEstilo_222</styleUrl>
+  <Point><coordinates>-79.468491,-1.012990,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 13.06</name>
+  <styleUrl>#heatmapEstilo_13</styleUrl>
+  <Point><coordinates>-79.468439,-1.012985,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 30.51</name>
+  <styleUrl>#heatmapEstilo_181</styleUrl>
+  <Point><coordinates>-79.468401,-1.013004,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 35.26</name>
+  <styleUrl>#heatmapEstilo_226</styleUrl>
+  <Point><coordinates>-79.468369,-1.013017,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 27.63</name>
+  <styleUrl>#heatmapEstilo_153</styleUrl>
+  <Point><coordinates>-79.468330,-1.013032,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 33.73</name>
+  <styleUrl>#heatmapEstilo_212</styleUrl>
+  <Point><coordinates>-79.468291,-1.013045,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 20.30</name>
+  <styleUrl>#heatmapEstilo_83</styleUrl>
+  <Point><coordinates>-79.468249,-1.013054,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 27.93</name>
+  <styleUrl>#heatmapEstilo_156</styleUrl>
+  <Point><coordinates>-79.468213,-1.013039,0</coordinates></Point>
+</Placemark>
+<Placemark>
+  <name>Radiacion: 33.50</name>
+  <styleUrl>#heatmapEstilo_209</styleUrl>
+  <Point><coordinates>-79.468185,-1.013049,0</coordinates></Point>
+</Placemark>
+</Folder>
+</Document>
+</kml>

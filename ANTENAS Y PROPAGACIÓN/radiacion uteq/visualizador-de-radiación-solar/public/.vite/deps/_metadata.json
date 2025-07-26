@@ -1,0 +1,67 @@
+{
+  "hash": "f9c44684",
+  "configHash": "f0ee1b16",
+  "lockfileHash": "f7adbdc0",
+  "browserHash": "4d5f3f1c",
+  "optimized": {
+    "d3-array": {
+      "src": "../../node_modules/d3-array/src/index.js",
+      "file": "d3-array.js",
+      "fileHash": "082aa3bc",
+      "needsInterop": false
+    },
+    "d3-dsv": {
+      "src": "../../node_modules/d3-dsv/src/index.js",
+      "file": "d3-dsv.js",
+      "fileHash": "d83279bf",
+      "needsInterop": false
+    },
+    "d3-scale": {
+      "src": "../../node_modules/d3-scale/src/index.js",
+      "file": "d3-scale.js",
+      "fileHash": "65d1fa35",
+      "needsInterop": false
+    },
+    "d3-scale-chromatic": {
+      "src": "../../node_modules/d3-scale-chromatic/src/index.js",
+      "file": "d3-scale-chromatic.js",
+      "fileHash": "ddfbbbf8",
+      "needsInterop": false
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "9b0634f4",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "74091a28",
+      "needsInterop": true
+    },
+    "react-leaflet": {
+      "src": "../../node_modules/react-leaflet/lib/index.js",
+      "file": "react-leaflet.js",
+      "fileHash": "24a109c4",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-XQIPT53K": {
+      "file": "chunk-XQIPT53K.js"
+    },
+    "chunk-KS2M7ZJI": {
+      "file": "chunk-KS2M7ZJI.js"
+    },
+    "chunk-42OJMDOU": {
+      "file": "chunk-42OJMDOU.js"
+    },
+    "chunk-LIM6LNES": {
+      "file": "chunk-LIM6LNES.js"
+    },
+    "chunk-5WRI5ZAA": {
+      "file": "chunk-5WRI5ZAA.js"
+    }
+  }
+}
