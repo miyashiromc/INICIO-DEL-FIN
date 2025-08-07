@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TrigTutor IA - Tesis UTEQ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-primary': '#4f46e5', // indigo-600
+              'brand-secondary': '#6366f1', // indigo-500
+              'base-100': '#ffffff', // white
+              'base-200': '#f3f4f6', // gray-100
+              'base-300': '#e5e7eb', // gray-200
+              'base-content': '#1f2937', // gray-800
+              'dark-base-100': '#0f172a', // slate-900
+              'dark-base-200': '#1e293b', // slate-800
+              'dark-base-300': '#334155', // slate-700
+              'dark-base-content': '#f1f5f9', // slate-100
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <style>
+        .markdown-content h1, .markdown-content h2, .markdown-content h3 {
+          font-weight: bold;
+          margin-top: 1.25rem;
+          margin-bottom: 0.75rem;
+          line-height: 1.2;
+        }
+        .markdown-content h1 { font-size: 1.875rem; }
+        .markdown-content h2 { font-size: 1.5rem; }
+        .markdown-content h3 { font-size: 1.25rem; }
+        .markdown-content p { margin-bottom: 1rem; }
+        .markdown-content ul, .markdown-content ol { list-style-position: inside; margin-bottom: 1rem; padding-left: 1.5rem; }
+        .markdown-content ul { list-style-type: disc; }
+        .markdown-content ol { list-style-type: decimal; }
+        .markdown-content li { margin-bottom: 0.25rem; }
+        .markdown-content pre {
+            background-color: #282c34;
+            color: #abb2bf;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin-bottom: 1rem;
+        }
+        .markdown-content code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .markdown-content code:not(pre > code) {
+            background-color: #e5e7eb;
+            color: #374151;
+            padding: 0.2rem 0.4rem;
+            border-radius: 0.25rem;
+            font-size: 0.9em;
+        }
+        .dark .markdown-content code:not(pre > code) {
+            background-color: #4b5563;
+            color: #f9fafb;
+        }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.11.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-base-200 dark:bg-dark-base-100 font-sans">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Aprendizaje de Vocabulario por Escenarios</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .loader {
+            border: 4px solid #e5e7eb;
+            border-top: 4px solid #4f46e5;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .audio-btn:hover svg {
+            transform: scale(1.1);
+        }
+        .exercise-input {
+            border-bottom: 2px solid #9ca3af;
+            background-color: transparent;
+            text-align: center;
+            transition: border-color 0.3s;
+        }
+        .exercise-input:focus {
+            outline: none;
+            border-bottom-color: #4f46e5;
+        }
+        .correct {
+            border-bottom-color: #10b981 !important;
+            color: #059669;
+        }
+        .incorrect {
+            border-bottom-color: #ef4444 !important;
+            color: #dc2626;
+        }
+        .feedback-text {
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.5rem;
+        }
+        .feedback-correct {
+            color: #047857;
+            background-color: #d1fae5;
+        }
+        .feedback-incorrect {
+            color: #b91c1c;
+            background-color: #fee2e2;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Aprende Inglés con Escenarios</h1>
+            <p class="mt-3 text-lg text-gray-600">Genera una escena, aprende vocabulario y practica con ejercicios.</p>
+        </header>
+
+        <main class="max-w-4xl mx-auto">
+            <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+                <div class="space-y-4">
+                    <div>
+                        <label for="prompt-input" class="block text-sm font-medium text-gray-700 mb-2">Describe el escenario que quieres crear y aprender:</label>
+                        <textarea id="prompt-input" rows="3" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" placeholder="Ej: una biblioteca antigua y silenciosa por la noche..."></textarea>
+                    </div>
+                    <button id="generate-btn" class="w-full bg-indigo-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-300 ease-in-out flex items-center justify-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-magic" viewBox="0 0 16 16">
+                          <path d="M9.5 2.672a.5.5 0 1 0 1 0V.843a.5.5 0 0 0-1 0v1.829Zm4.5.035A.5.5 0 0 0 13.293 2L12 3.293a.5.5 0 1 0 .707.707L14 2.707a.5.5 0 0 0 0-.707ZM7.293 4L8 3.293a.5.5 0 1 0-.707-.707L6.586 3.5a.5.5 0 0 0 0 .707.5.5 0 0 0 .707 0ZM1.5 10.672a.5.5 0 1 0-1 0v1.829a.5.5 0 0 0 1 0v-1.829ZM10 15.157a.5.5 0 0 0 1 0v-1.829a.5.5 0 0 0-1 0v1.829ZM12.707 12l.707.707a.5.5 0 0 0 .707-.707L13.414 11.5a.5.5 0 0 0-.707 0ZM3.293 12.707.707.707 3.414 12a.5.5 0 0 0 .707 0L2.293 11.293a.5.5 0 1 0-.707.707L3.293 12.707Zm9.414-9.414a.5.5 0 0 0 0-.707L12 2.293a.5.5 0 1 0-.707.707L12.707 3.293ZM4.5 8.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Z"/>
+                          <path d="M11 6.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm-6.5 6.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1Z"/>
+                          <path d="M4.032 4.177a.5.5 0 0 1 .707 0l1.284 1.284a.5.5 0 1 1-.707.707L4.032 4.884a.5.5 0 0 1 0-.707Zm8.636 7.353a.5.5 0 0 1 0 .707l-1.284 1.284a.5.5 0 1 1-.707-.707l1.284-1.284a.5.5 0 0 1 .707 0Z"/>
+                        </svg>
+                        <span>Crear y Aprender</span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="status-container" class="mt-6 text-center text-gray-600"></div>
+            <div id="error-message" class="hidden mt-6 text-center p-4 bg-red-100 text-red-700 rounded-lg"></div>
+
+            <div id="result-container" class="mt-8 space-y-8 hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+                    <div id="image-container" class="bg-white p-4 rounded-xl shadow-lg flex justify-center items-center min-h-[300px]">
+                        <img id="generated-image" src="" alt="Imagen generada" class="rounded-lg w-full h-auto">
+                    </div>
+                    <div id="vocab-container" class="bg-white p-4 rounded-xl shadow-lg min-h-[300px]">
+                        <h2 class="text-2xl font-bold mb-4 text-indigo-700">Vocabulario de la Escena</h2>
+                        <div id="vocab-list" class="space-y-3"></div>
+                    </div>
+                </div>
+                <div id="exercises-container" class="bg-white p-6 md:p-8 rounded-xl shadow-lg hidden">
+                    <h2 class="text-2xl font-bold mb-6 text-teal-700">¡A Practicar!</h2>
+                    <div id="exercises-list" class="space-y-6"></div>
+                    <button id="check-answers-btn" class="mt-6 bg-teal-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition">
+                        Verificar Respuestas
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const generateBtn = document.getElementById('generate-btn');
+        const promptInput = document.getElementById('prompt-input');
+        const statusContainer = document.getElementById('status-container');
+        const errorMessage = document.getElementById('error-message');
+        const resultContainer = document.getElementById('result-container');
+        const generatedImage = document.getElementById('generated-image');
+        const vocabList = document.getElementById('vocab-list');
+        const exercisesContainer = document.getElementById('exercises-container');
+        const exercisesList = document.getElementById('exercises-list');
+        const checkAnswersBtn = document.getElementById('check-answers-btn');
+
+        const apiKey = "AIzaSyAYC5D1T9aplVnHxYN6-9GP4iOJ6PjTTmk"; // Injected by the environment
+
+        generateBtn.addEventListener('click', handleGeneration);
+        checkAnswersBtn.addEventListener('click', checkAnswers);
+
+        async function handleGeneration() {
+            const userPrompt = promptInput.value.trim();
+            if (!userPrompt) {
+                showError('Por favor, escribe una descripción para la escena.');
+                return;
+            }
+
+            setLoadingState(true, '1/4: Creando tu escenario...');
+            hideError();
+            resultContainer.classList.add('hidden');
+            exercisesContainer.classList.add('hidden');
+            
+            try {
+                const base64ImageData = await generateImage(userPrompt);
+                generatedImage.src = `data:image/png;base64,${base64ImageData}`;
+                resultContainer.classList.remove('hidden');
+
+                setLoadingState(true, '2/4: Analizando la imagen y extrayendo vocabulario...');
+                const vocabularyItems = await generateVocabulary(userPrompt, base64ImageData);
+                await displayVocabulary(vocabularyItems);
+                
+                setLoadingState(true, '3/4: Creando ejercicios de práctica...');
+                const exercises = await generateExercises(userPrompt, vocabularyItems, base64ImageData);
+                displayExercises(exercises);
+
+                setLoadingState(true, '4/4: Preparando la pronunciación...');
+                await addAudioToVocabulary(vocabularyItems);
+                
+                setLoadingState(false);
+
+            } catch (error) {
+                console.error('Error en el proceso de generación:', error);
+                showError(`Lo sentimos, ocurrió un error: ${error.message}. Inténtalo de nuevo.`);
+                setLoadingState(false);
+            }
+        }
+
+        async function generateImage(prompt) {
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/imagen-3.0-generate-002:predict?key=${apiKey}`;
+            const payload = { instances: [{ prompt }], parameters: { "sampleCount": 1 } };
+            const response = await fetch(apiUrl, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+            if (!response.ok) throw new Error(`Error en la API de imagen (${response.status})`);
+            const result = await response.json();
+            if (result.predictions && result.predictions[0]?.bytesBase64Encoded) return result.predictions[0].bytesBase64Encoded;
+            throw new Error('La respuesta de la API de imagen no fue válida.');
+        }
+
+        async function generateVocabulary(prompt, base64ImageData) {
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+            const payload = {
+                contents: [{ parts: [ { text: `Analyze this image and the user's prompt "${prompt}". Identify 8 key objects or concepts. For each, provide its name in English, its IPA transcription, and its Spanish translation. Respond ONLY with a JSON array following this schema. Do not include markdown ticks.` }, { inlineData: { mimeType: "image/png", data: base64ImageData } } ] }],
+                generationConfig: { responseMimeType: "application/json", responseSchema: { type: "ARRAY", items: { type: "OBJECT", properties: { "english": { "type": "STRING" }, "ipa": { "type": "STRING" }, "spanish": { "type": "STRING" } }, required: ["english", "ipa", "spanish"] } } }
+            };
+            const response = await fetch(apiUrl, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+            if (!response.ok) throw new Error(`Error en la API de vocabulario (${response.status})`);
+            const result = await response.json();
+            if (result.candidates?.[0]?.content?.parts?.[0]?.text) return JSON.parse(result.candidates[0].content.parts[0].text);
+            throw new Error('La respuesta de la API de vocabulario no fue válida.');
+        }
+
+        async function generateExercises(prompt, vocabulary, base64ImageData) {
+            const vocabString = vocabulary.map(v => v.english).join(', ');
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+            const payload = {
+                contents: [{ parts: [ { text: `Based on the user's prompt "${prompt}", the image, and this vocabulary list [${vocabString}], create 7 fill-in-the-blank sentences. Each sentence must use one word from the vocabulary list. Crucially, use a variety of verb tenses (e.g., simple present, simple past, present continuous, future simple, present perfect). The missing word should be replaced with "___". For each sentence, provide the full sentence, the correct answer, and a brief, helpful explanation for why that word fits the context. Respond ONLY with a JSON array following this schema. Do not include markdown ticks.` }, { inlineData: { mimeType: "image/png", data: base64ImageData } } ] }],
+                generationConfig: { responseMimeType: "application/json", responseSchema: { type: "ARRAY", items: { type: "OBJECT", properties: { "sentence": { "type": "STRING" }, "answer": { "type": "STRING" }, "explanation": { "type": "STRING" } }, required: ["sentence", "answer", "explanation"] } } }
+            };
+            const response = await fetch(apiUrl, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+            if (!response.ok) throw new Error(`Error en la API de ejercicios (${response.status})`);
+            const result = await response.json();
+            if (result.candidates?.[0]?.content?.parts?.[0]?.text) return JSON.parse(result.candidates[0].content.parts[0].text);
+            throw new Error('La respuesta de la API de ejercicios no fue válida.');
+        }
+        
+        async function displayVocabulary(items) {
+            vocabList.innerHTML = '';
+            items.forEach(item => {
+                const vocabItemEl = document.createElement('div');
+                vocabItemEl.className = 'p-3 border border-gray-200 rounded-lg flex items-center justify-between';
+                vocabItemEl.innerHTML = `
+                    <div>
+                        <p class="font-bold text-lg flex items-baseline gap-2">
+                            <span>${item.english}</span>
+                            <span class="text-sm font-normal text-rose-600">/${item.ipa}/</span>
+                        </p>
+                        <p class="text-gray-500">${item.spanish}</p>
+                    </div>
+                    <button class="audio-btn p-2 rounded-full hover:bg-indigo-100 transition opacity-50" data-word="${item.english}" disabled>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="text-indigo-600 transition-transform" viewBox="0 0 16 16"><path d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z"/><path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z"/><path d="M8.707 11.182A4.486 4.486 0 0 0 10.025 8a4.486 4.486 0 0 0-1.318-3.182L8 5.525A3.489 3.489 0 0 1 9.025 8 3.49 3.49 0 0 1 8 10.475l.707.707zM6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06z"/></svg>
+                    </button>
+                `;
+                vocabList.appendChild(vocabItemEl);
+            });
+        }
+
+        async function addAudioToVocabulary(items) {
+            const audioButtons = vocabList.querySelectorAll('.audio-btn');
+            for (const btn of audioButtons) {
+                const word = btn.dataset.word;
+                const audioUrl = await generateAudio(word);
+                if (audioUrl) {
+                    btn.onclick = () => new Audio(audioUrl).play();
+                    btn.disabled = false;
+                    btn.classList.remove('opacity-50');
+                }
+            }
+        }
+        
+        function displayExercises(exercises) {
+            exercisesList.innerHTML = '';
+            exercises.forEach((ex, index) => {
+                const sentenceHTML = ex.sentence.replace('___', `<input type="text" class="exercise-input w-32 mx-1 p-1" data-answer="${ex.answer.toLowerCase()}" data-explanation="${ex.explanation}" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">`);
+                const exerciseEl = document.createElement('div');
+                exerciseEl.innerHTML = `
+                    <div class="flex items-center gap-2 text-lg">
+                        <span class="font-bold text-gray-500">${index + 1}.</span>
+                        <p>${sentenceHTML}</p>
+                    </div>
+                    <div class="feedback-container pl-6 hidden"></div>
+                `;
+                exercisesList.appendChild(exerciseEl);
+            });
+            exercisesContainer.classList.remove('hidden');
+        }
+
+        function checkAnswers() {
+            const exerciseItems = exercisesList.querySelectorAll('.exercise-input');
+            exerciseItems.forEach(input => {
+                const container = input.closest('.flex').parentElement;
+                const feedbackContainer = container.querySelector('.feedback-container');
+                const userAnswer = input.value.trim().toLowerCase();
+                const correctAnswer = input.dataset.answer;
+                const explanation = input.dataset.explanation;
+                
+                input.classList.remove('correct', 'incorrect');
+                feedbackContainer.innerHTML = '';
+                feedbackContainer.classList.add('hidden');
+
+                if (userAnswer === correctAnswer) {
+                    input.classList.add('correct');
+                    feedbackContainer.innerHTML = `<div class="feedback-text feedback-correct">¡Correcto!</div>`;
+                    feedbackContainer.classList.remove('hidden');
+                } else {
+                    input.classList.add('incorrect');
+                    feedbackContainer.innerHTML = `<div class="feedback-text feedback-incorrect"><strong>Respuesta correcta:</strong> ${correctAnswer}.<br>${explanation}</div>`;
+                    feedbackContainer.classList.remove('hidden');
+                }
+            });
+        }
+
+        async function generateAudio(text) {
+            try {
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`;
+                const payload = { model: "gemini-2.5-flash-preview-tts", contents: [{ parts: [{ text }] }], generationConfig: { responseModalities: ["AUDIO"] } };
+                const response = await fetch(apiUrl, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+                if (!response.ok) throw new Error('TTS API failed');
+                const result = await response.json();
+                const audioData = result.candidates?.[0]?.content?.parts?.[0]?.inlineData?.data;
+                const mimeType = result.candidates?.[0]?.content?.parts?.[0]?.inlineData?.mimeType;
+                if (audioData && mimeType.startsWith("audio/")) {
+                    const sampleRate = parseInt(mimeType.match(/rate=(\d+)/)[1], 10);
+                    const pcmData = base64ToArrayBuffer(audioData);
+                    const pcm16 = new Int16Array(pcmData);
+                    const wavBlob = pcmToWav(pcm16, 1, sampleRate);
+                    return URL.createObjectURL(wavBlob);
+                }
+                return null;
+            } catch (error) {
+                console.error(`Failed to generate audio for "${text}":`, error);
+                return null;
+            }
+        }
+
+        function setLoadingState(isLoading, message = '') {
+            if (isLoading) {
+                statusContainer.innerHTML = `<div class="flex justify-center items-center flex-col"><div class="loader"></div><p class="mt-4">${message}</p></div>`;
+                generateBtn.disabled = true;
+                generateBtn.classList.add('opacity-50', 'cursor-not-allowed');
+            } else {
+                statusContainer.innerHTML = '';
+                generateBtn.disabled = false;
+                generateBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+            }
+        }
+
+        function showError(message) {
+            errorMessage.textContent = message;
+            errorMessage.classList.remove('hidden');
+        }
+
+        function hideError() {
+            errorMessage.classList.add('hidden');
+        }
+
+        function base64ToArrayBuffer(base64) {
+            const binaryString = window.atob(base64);
+            const len = binaryString.length;
+            const bytes = new Uint8Array(len);
+            for (let i = 0; i < len; i++) {
+                bytes[i] = binaryString.charCodeAt(i);
+            }
+            return bytes.buffer;
+        }
+
+        function pcmToWav(pcmData, numChannels, sampleRate) {
+            const buffer = new ArrayBuffer(44 + pcmData.length * 2);
+            const view = new DataView(buffer);
+            function writeString(view, offset, string) { for (let i = 0; i < string.length; i++) { view.setUint8(offset + i, string.charCodeAt(i)); } }
+            writeString(view, 0, 'RIFF');
+            view.setUint32(4, 36 + pcmData.length * 2, true);
+            writeString(view, 8, 'WAVE');
+            writeString(view, 12, 'fmt ');
+            view.setUint32(16, 16, true);
+            view.setUint16(20, 1, true);
+            view.setUint16(22, numChannels, true);
+            view.setUint32(24, sampleRate, true);
+            view.setUint32(28, sampleRate * 2 * numChannels, true);
+            view.setUint16(32, numChannels * 2, true);
+            view.setUint16(34, 16, true);
+            writeString(view, 36, 'data');
+            view.setUint32(40, pcmData.length * 2, true);
+            for (let i = 0; i < pcmData.length; i++) { view.setInt16(44 + i * 2, pcmData[i], true); }
+            return new Blob([view], { type: 'audio/wav' });
+        }
+    </script>
+</body>
+</html>
