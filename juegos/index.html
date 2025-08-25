@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizarra Creativa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- El título ya no es necesario, el diseño habla por sí mismo -->
+    <canvas id="pizarra"></canvas>
+    <div class="controles">
+        <!-- Herramientas -->
+        <button id="lapiz" title="Lápiz">✏️</button>
+        <button id="borrador" title="Borrador">🔥</button>
+        
+        <!-- Propiedades del Pincel -->
+        <input type="color" id="color" title="Color del pincel" value="#3498db">
+        <label for="grosor">Grosor:</label>
+        <input type="range" id="grosor" min="1" max="50" value="5" title="Grosor del pincel">
+        <label for="forma">Punta:</label>
+        <select id="forma" title="Forma de la punta">
+            <option value="round">Redonda</option>
+            <option value="square">Cuadrada</option>
+        </select>
+
+        <!-- Acciones -->
+        <button id="limpiar" title="Limpiar todo">🗑️</button>
+        <a id="guardar" href="#" download="pizarra.png"><button title="Guardar dibujo">💾</button></a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

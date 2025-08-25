@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    background-color: #2c3e50; /* Azul oscuro */
+    color: #ecf0f1; /* Texto claro */
+}
+
+#pizarra {
+    display: block;
+    background-color: #34495e; /* Azul un poco más claro */
+    background-image: 
+        linear-gradient(rgba(236, 240, 241, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(236, 240, 241, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.controles {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(44, 62, 80, 0.8);
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid rgba(236, 240, 241, 0.2);
+}
+
+button, select, a button {
+    background-color: #3498db; /* Azul brillante */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover, select:hover, a button:hover {
+    background-color: #2980b9; /* Azul más oscuro al pasar el ratón */
+    transform: translateY(-2px);
+}
+
+#borrador {
+    background-color: #e74c3c; /* Rojo para el borrador */
+}
+
+#borrador:hover {
+    background-color: #c0392b;
+}
+
+input[type="color"] {
+    -webkit-appearance: none;
+    width: 35px;
+    height: 35px;
+    border: none;
+    padding: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+    border-radius: 50%;
+}
+input[type="color"]::-webkit-color-swatch {
+    border: 2px solid #ecf0f1;
+    border-radius: 50%;
+}
+input[type="color"]:hover {
+    transform: scale(1.1);
+}
+
+input[type="range"] {
+    cursor: pointer;
+}
+
+label {
+    font-size: 0.9em;
+}
+
+a {
+    text-decoration: none;
+}
