@@ -1,6 +1,0 @@
-{
-  "name": "TIA",
-  "description": "An interactive web application that uses the Gemini API to generate structured, educational content on any topic requested by the user. It features a chat interface for topic submission and content refinement.",
-  "requestFramePermissions": [],
-  "prompt": ""
-}
