@@ -1,0 +1,737 @@
+{
+  "materias": [
+    {
+      "nombre_materia": "ANTENAS Y PROPAGACIÓN",
+      "archivos": [
+        {
+          "nombre": "1 CORTE",
+          "descripcion": "Carpeta que contiene los archivos del primer corte.",
+          "tipo": "Carpeta de archivos",
+          "fecha_modificacion": "17/11/2024 20:02"
+        },
+        {
+          "nombre": "2 CORTE",
+          "descripcion": "Carpeta que contiene los archivos del segundo corte.",
+          "tipo": "Carpeta de archivos",
+          "fecha_modificacion": "17/11/2024 20:02"
+        },
+        {
+          "nombre": "CONTENIDO",
+          "descripcion": "Carpeta con el contenido general de la materia.",
+          "tipo": "Carpeta de archivos",
+          "fecha_modificacion": "22/6/2025 22:39"
+        },
+        {
+          "nombre": "DISEÑO ANTENA LOG-PERIODICA",
+          "descripcion": "Carpeta relacionada con el diseño de una antena log-periódica.",
+          "tipo": "Carpeta de archivos",
+          "fecha_modificacion": "3/8/2025 21:28"
+        },
+        {
+          "nombre": "matlab",
+          "descripcion": "Carpeta con archivos o scripts de MATLAB.",
+          "tipo": "Carpeta de archivos",
+          "fecha_modificacion": "6/7/2025 16:09"
+        },
+        {
+          "nombre": "optimizacion antena log-periodica",
+          "descripcion": "Carpeta sobre la optimización de la antena log-periódica.",
+          "tipo": "Carpeta de archivos",
+          "fecha_modificacion": "17/7/2025 21:02"
+        },
+        {
+          "nombre": "radiacion uteq",
+          "descripcion": "Carpeta con información sobre radiación en la UTEQ.",
+          "tipo": "Carpeta de archivos",
+          "fecha_modificacion": "26/7/2025 08:36"
+        },
+        {
+          "nombre": "yagi-uda",
+          "descripcion": "Carpeta relacionada con antenas Yagi-Uda.",
+          "tipo": "Carpeta de archivos",
+          "fecha_modificacion": "19/6/2025 11:30"
+        },
+        {
+          "nombre": "AAA CARATULEX grupal.docx",
+          "descripcion": "Documento de Word con la carátula para trabajos grupales.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "29/6/2025 13:39"
+        },
+        {
+          "nombre": "AAA CARATULEX PDF.docx",
+          "descripcion": "Documento de Word para la carátula en formato PDF.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "17/8/2025 08:25"
+        },
+        {
+          "nombre": "Antenas tipo dpolo.docx",
+          "descripcion": "Documento de Word sobre antenas de tipo dipolo.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "23/6/2025 00:03"
+        },
+        {
+          "nombre": "Antenas tipo dpolo.pdf",
+          "descripcion": "Documento PDF sobre antenas de tipo dipolo.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "23/6/2025 00:00"
+        },
+        {
+          "nombre": "caracteristicas de antenas.pdf",
+          "descripcion": "Documento PDF con las características de las antenas.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "6/7/2025 15:43"
+        },
+        {
+          "nombre": "consulta.docx",
+          "descripcion": "Documento de Word para una consulta.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "27/7/2025 17:49"
+        },
+        {
+          "nombre": "consulta.pdf",
+          "descripcion": "Documento PDF de una consulta.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "27/7/2025 17:48"
+        },
+        {
+          "nombre": "Gráfico_de_Lóbulos_de_Radiación_Cálcul....docx",
+          "descripcion": "Documento de Word con el gráfico y cálculos de lóbulos de radiación.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "8/6/2025 10:34"
+        },
+        {
+          "nombre": "Gráfico_de_Lóbulos_de_Radiación_Cálcul....pdf",
+          "descripcion": "Documento PDF con el gráfico y cálculos de lóbulos de radiación.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "8/6/2025 10:26"
+        },
+        {
+          "nombre": "Perfil topográfico.docx",
+          "descripcion": "Documento de Word con un perfil topográfico.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "17/8/2025 08:26"
+        },
+        {
+          "nombre": "Perfil topográfico.pdf",
+          "descripcion": "Documento PDF con un perfil topográfico.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "17/8/2025 08:26"
+        },
+        {
+          "nombre": "s1 características.docx",
+          "descripcion": "Documento de Word con características de la semana 1.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "31/5/2025 20:01"
+        },
+        {
+          "nombre": "s1 características.pdf",
+          "descripcion": "Documento PDF con características de la semana 1.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "31/5/2025 19:18"
+        },
+        {
+          "nombre": "SIMULACIONES ANTENAS.docx",
+          "descripcion": "Documento de Word sobre simulaciones de antenas.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "10/8/2025 18:01"
+        },
+        {
+          "nombre": "SIMULACIONES ANTENAS.pdf",
+          "descripcion": "Documento PDF sobre simulaciones de antenas.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "10/8/2025 17:59"
+        }
+      ]
+    },
+    {
+      "nombre_materia": "DESARROLLO DE TITULACIÓN II",
+      "archivos": [
+        {
+          "nombre": "1 CORTE",
+          "descripcion": "Carpeta que contiene los archivos del primer corte.",
+          "tipo": "Carpeta de archivos",
+          "fecha_modificacion": "17/11/2024 20:02"
+        },
+        {
+          "nombre": "2 CORTE",
+          "descripcion": "Carpeta que contiene los archivos del segundo corte.",
+          "tipo": "Carpeta de archivos",
+          "fecha_modificacion": "17/11/2024 20:02"
+        },
+        {
+          "nombre": "CONTENIDO",
+          "descripcion": "Carpeta con el contenido general de la materia.",
+          "tipo": "Carpeta de archivos",
+          "fecha_modificacion": "8/6/2025 10:17"
+        },
+        {
+          "nombre": "deber articulo cientifico",
+          "descripcion": "Carpeta con el deber sobre un artículo científico.",
+          "tipo": "Carpeta de archivos",
+          "fecha_modificacion": "17/7/2025 17:56"
+        },
+        {
+          "nombre": "TESIS",
+          "descripcion": "Carpeta con archivos relacionados a la tesis.",
+          "tipo": "Carpeta de archivos",
+          "fecha_modificacion": "7/8/2025 18:42"
+        },
+        {
+          "nombre": "~$GLAMENTO.docx",
+          "descripcion": "Archivo temporal de un documento de Word sobre un reglamento.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "8/6/2025 10:17"
+        },
+        {
+          "nombre": "~WRL0003.tmp",
+          "descripcion": "Archivo temporal del sistema.",
+          "tipo": "Archivo TMP",
+          "fecha_modificacion": "8/6/2025 10:17"
+        },
+        {
+          "nombre": "AAA CARATULEX grupal.docx",
+          "descripcion": "Documento de Word con la carátula para trabajos grupales.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "30/7/2025 16:13"
+        },
+        {
+          "nombre": "AAA CARATULEX PDF.docx",
+          "descripcion": "Documento de Word para la carátula en formato PDF.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "4/8/2025 16:28"
+        },
+        {
+          "nombre": "AAA CARATULEX PDF.pdf",
+          "descripcion": "Documento PDF de la carátula.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "3/8/2025 21:32"
+        },
+        {
+          "nombre": "AGgreglamento.docx",
+          "descripcion": "Documento de Word con un reglamento.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "8/6/2025 10:17"
+        },
+        {
+          "nombre": "BASES DE DATOS CIENTÍFICAS.docx",
+          "descripcion": "Documento de Word sobre bases de datos científicas.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "6/7/2025 20:45"
+        },
+        {
+          "nombre": "BASES DE DATOS CIENTÍFICAS.pdf",
+          "descripcion": "Documento PDF sobre bases de datos científicas.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "19/6/2025 22:23"
+        },
+        {
+          "nombre": "CARATULAREGLAMENTO.pdf",
+          "descripcion": "Documento PDF con la carátula del reglamento.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "8/6/2025 10:17"
+        },
+        {
+          "nombre": "DEBER REGLAMENTO.docx",
+          "descripcion": "Documento de Word con el deber sobre el reglamento.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "8/6/2025 10:17"
+        },
+        {
+          "nombre": "DEBER REGLAMENTO.pdf",
+          "descripcion": "Documento PDF con el deber sobre el reglamento.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "8/6/2025 10:17"
+        },
+        {
+          "nombre": "DESARROLLO DE PRÁCTICA 3.docx",
+          "descripcion": "Documento de Word con el desarrollo de la práctica 3.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "4/8/2025 17:09"
+        },
+        {
+          "nombre": "DESARROLLO DE PRÁCTICA 3.pdf",
+          "descripcion": "Documento PDF con el desarrollo de la práctica 3.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "4/8/2025 17:09"
+        },
+        {
+          "nombre": "DISEÑO ANTENA LOG PERIODICA.pdf",
+          "descripcion": "Documento PDF sobre el diseño de una antena log-periódica.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "3/8/2025 21:22"
+        },
+        {
+          "nombre": "ilovepdf_merged.pdf",
+          "descripcion": "Documento PDF combinado usando una herramienta en línea.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "8/6/2025 10:17"
+        },
+        {
+          "nombre": "PIRÁMIDE INVERTIDA DE BASE DE DATO....docx",
+          "descripcion": "Documento de Word sobre la pirámide invertida para bases de datos.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "3/8/2025 21:19"
+        },
+        {
+          "nombre": "PIRÁMIDE INVERTIDA DE BASE DE DATO....pdf",
+          "descripcion": "Documento PDF sobre la pirámide invertida para bases de datos.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "3/8/2025 21:18"
+        },
+        {
+          "nombre": "Plataformas de Búsqueda Científica.docx",
+          "descripcion": "Documento de Word sobre plataformas de búsqueda científica.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "6/7/2025 20:55"
+        },
+        {
+          "nombre": "Plataformas de Búsqueda Científica.pdf",
+          "descripcion": "Documento PDF sobre plataformas de búsqueda científica.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "6/7/2025 20:54"
+        },
+        {
+          "nombre": "PROMPTS CHAT GPT.docx",
+          "descripcion": "Documento de Word con prompts para ChatGPT.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "27/7/2025 17:16"
+        },
+        {
+          "nombre": "PROMPTS CHAT GPT.pdf",
+          "descripcion": "Documento PDF con prompts para ChatGPT.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "27/7/2025 17:16"
+        },
+        {
+          "nombre": "REGLAMENTO.docx",
+          "descripcion": "Documento de Word con un reglamento.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "8/6/2025 10:17"
+        },
+        {
+          "nombre": "REGLAMENTO.pdf",
+          "descripcion": "Documento PDF de un reglamento.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "8/6/2025 10:17"
+        }
+      ]
+    },
+    {
+      "nombre_materia": "EMPRENDIMIENTO E INNOVACIONES TECNOLÓGICAS",
+      "archivos": [
+        {
+          "nombre": "1 CORTE",
+          "descripcion": "Carpeta que contiene los archivos del primer corte.",
+          "tipo": "Carpeta de archivos",
+          "fecha_modificacion": "17/11/2024 20:02"
+        },
+        {
+          "nombre": "2 CORTE",
+          "descripcion": "Carpeta que contiene los archivos del segundo corte.",
+          "tipo": "Carpeta de archivos",
+          "fecha_modificacion": "17/11/2024 20:02"
+        },
+        {
+          "nombre": "CONTENIDO",
+          "descripcion": "Carpeta con el contenido general de la materia.",
+          "tipo": "Carpeta de archivos",
+          "fecha_modificacion": "21/5/2025 21:25"
+        },
+        {
+          "nombre": "matriz de riesgos",
+          "descripcion": "Carpeta con la matriz de riesgos.",
+          "tipo": "Carpeta de archivos",
+          "fecha_modificacion": "29/6/2025 15:29"
+        },
+        {
+          "nombre": "15 modulso.docx",
+          "descripcion": "Documento de Word del módulo 15.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "14/6/2025 22:56"
+        },
+        {
+          "nombre": "15 modulso.pdf",
+          "descripcion": "Documento PDF del módulo 15.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "14/6/2025 22:56"
+        },
+        {
+          "nombre": "15.pdf",
+          "descripcion": "Documento PDF número 15.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "8/6/2025 19:45"
+        },
+        {
+          "nombre": "15_merged.pdf",
+          "descripcion": "Documento PDF combinado número 15.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "8/6/2025 19:46"
+        },
+        {
+          "nombre": "AAA CARATULEX grupal.docx",
+          "descripcion": "Documento de Word con la carátula para trabajos grupales.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "19/5/2025 15:07"
+        },
+        {
+          "nombre": "AAA CARATULEX PDF.docx",
+          "descripcion": "Documento de Word para la carátula en formato PDF.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "13/8/2025 17:34"
+        },
+        {
+          "nombre": "AAA CARATULEX PDF.pdf",
+          "descripcion": "Documento PDF de la carátula.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "8/6/2025 19:46"
+        },
+        {
+          "nombre": "Análisis de una industria.docx",
+          "descripcion": "Documento de Word con el análisis de una industria.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "13/8/2025 20:09"
+        },
+        {
+          "nombre": "Análisis de una industria.pdf",
+          "descripcion": "Documento PDF con el análisis de una industria.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "13/8/2025 19:12"
+        },
+        {
+          "nombre": "CARACTERISTICAS DE UN EMPRENDEDO....docx",
+          "descripcion": "Documento de Word sobre las características de un emprendedor.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "8/6/2025 12:21"
+        },
+        {
+          "nombre": "CARACTERISTICAS DE UN EMPRENDEDO....pdf",
+          "descripcion": "Documento PDF sobre las características de un emprendedor.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "8/6/2025 12:21"
+        },
+        {
+          "nombre": "deber foda.docx",
+          "descripcion": "Documento de Word con el deber sobre análisis FODA.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "28/6/2025 14:43"
+        },
+        {
+          "nombre": "deber foda.pdf",
+          "descripcion": "Documento PDF con el deber sobre análisis FODA.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "28/6/2025 12:19"
+        },
+        {
+          "nombre": "diagnositoc.pdf",
+          "descripcion": "Documento PDF de un diagnóstico.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "24/5/2025 21:11"
+        },
+        {
+          "nombre": "foda.docx",
+          "descripcion": "Documento de Word sobre análisis FODA.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "27/6/2025 17:32"
+        },
+        {
+          "nombre": "Gemini_Generated_Image_mz1062mz106....jpeg",
+          "descripcion": "Imagen generada por una IA.",
+          "tipo": "Archivo JPEG",
+          "fecha_modificacion": "25/5/2025 11:34"
+        },
+        {
+          "nombre": "LLUVIA DE IDEAS.docx",
+          "descripcion": "Documento de Word con una lluvia de ideas.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "15/6/2025 20:04"
+        },
+        {
+          "nombre": "LLUVIA DE IDEAS.pdf",
+          "descripcion": "Documento PDF con una lluvia de ideas.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "15/6/2025 19:59"
+        },
+        {
+          "nombre": "MODELO DE NEGOCIO.pdf",
+          "descripcion": "Documento PDF con un modelo de negocio.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "1/6/2025 11:00"
+        }
+      ]
+    },
+    {
+      "nombre_materia": "PROCESAMIENTO DE INFORMACIÓN EN APLICACIONES TELEMÁTICAS",
+      "archivos": [
+        {
+          "nombre": "1 CORTE",
+          "descripcion": "Carpeta que contiene los archivos del primer corte.",
+          "tipo": "Carpeta de archivos",
+          "fecha_modificacion": "17/11/2024 20:02"
+        },
+        {
+          "nombre": "2 CORTE",
+          "descripcion": "Carpeta que contiene los archivos del segundo corte.",
+          "tipo": "Carpeta de archivos",
+          "fecha_modificacion": "17/11/2024 20:02"
+        },
+        {
+          "nombre": "Análisis de Datos en Tableau con Pronóst....",
+          "descripcion": "Carpeta con análisis de datos en Tableau.",
+          "tipo": "Carpeta de archivos",
+          "fecha_modificacion": "25/8/2025 21:34"
+        },
+        {
+          "nombre": "CONTENIDO",
+          "descripcion": "Carpeta con el contenido general de la materia.",
+          "tipo": "Carpeta de archivos",
+          "fecha_modificacion": "8/6/2025 10:17"
+        },
+        {
+          "nombre": "global expo",
+          "descripcion": "Carpeta con archivos para una exposición global.",
+          "tipo": "Carpeta de archivos",
+          "fecha_modificacion": "12/8/2025 11:33"
+        },
+        {
+          "nombre": "Práctica en Clase Procesamiento del Dat....",
+          "descripcion": "Carpeta de una práctica en clase sobre procesamiento de datos.",
+          "tipo": "Carpeta de archivos",
+          "fecha_modificacion": "7/7/2025 18:15"
+        },
+        {
+          "nombre": "AAA CARATULEX grupal.docx",
+          "descripcion": "Documento de Word con la carátula para trabajos grupales.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "30/5/2025 22:16"
+        },
+        {
+          "nombre": "AAA CARATULEX PDF.docx",
+          "descripcion": "Documento de Word para la carátula en formato PDF.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "19/5/2025 15:13"
+        },
+        {
+          "nombre": "Creación_de_Dashboard_de_la_Base_de_....pdf",
+          "descripcion": "Documento PDF sobre la creación de un dashboard.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "12/8/2025 11:32"
+        },
+        {
+          "nombre": "expo sem 2.pptx",
+          "descripcion": "Presentación de PowerPoint para la exposición del segundo semestre.",
+          "tipo": "Presentación de Microsoft PowerPoint",
+          "fecha_modificacion": "25/5/2025 14:41"
+        },
+        {
+          "nombre": "Preprocesamiento de Datos en Tableau P....docx",
+          "descripcion": "Documento de Word sobre preprocesamiento de datos en Tableau.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "25/6/2025 18:13"
+        },
+        {
+          "nombre": "Preprocesamiento de Datos en Tableau P....pdf",
+          "descripcion": "Documento PDF sobre preprocesamiento de datos en Tableau.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "25/6/2025 18:12"
+        },
+        {
+          "nombre": "TALLER SOBRE STAKEHOLDERS Y PESTEL....docx",
+          "descripcion": "Documento de Word de un taller sobre análisis de Stakeholders y PESTEL.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "26/7/2025 21:03"
+        },
+        {
+          "nombre": "TALLER SOBRE STAKEHOLDERS Y PESTEL....pdf",
+          "descripcion": "Documento PDF de un taller sobre análisis de Stakeholders y PESTEL.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "26/7/2025 20:53"
+        },
+        {
+          "nombre": "Tema Análisis de Datos del Desempeño....docx",
+          "descripcion": "Documento de Word sobre el tema de análisis de datos del desempeño.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "30/5/2025 22:54"
+        },
+        {
+          "nombre": "Tema Análisis de Datos del Desempeño....pdf",
+          "descripcion": "Documento PDF sobre el tema de análisis de datos del desempeño.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "30/5/2025 22:51"
+        }
+      ]
+    },
+    {
+      "nombre_materia": "PROYECTOS DE TELECOMUNICACIONES",
+      "archivos": [
+        {
+          "nombre": "2 CORTE",
+          "descripcion": "Carpeta que contiene los archivos del segundo corte.",
+          "tipo": "Carpeta de archivos",
+          "fecha_modificacion": "17/11/2024 20:02"
+        },
+        {
+          "nombre": "CONTENIDO",
+          "descripcion": "Carpeta con el contenido general de la materia.",
+          "tipo": "Carpeta de archivos",
+          "fecha_modificacion": "14/7/2025 23:08"
+        },
+        {
+          "nombre": "iot",
+          "descripcion": "Carpeta con archivos sobre Internet de las Cosas (IoT).",
+          "tipo": "Carpeta de archivos",
+          "fecha_modificacion": "26/8/2025 22:51"
+        },
+        {
+          "nombre": "matriz de riesgo",
+          "descripcion": "Carpeta con la matriz de riesgos.",
+          "tipo": "Carpeta de archivos",
+          "fecha_modificacion": "1/7/2025 17:36"
+        },
+        {
+          "nombre": "10 ARTICULOS.docx",
+          "descripcion": "Documento de Word con 10 artículos.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "10/6/2025 21:52"
+        },
+        {
+          "nombre": "10 ARTICULOS.pdf",
+          "descripcion": "Documento PDF con 10 artículos.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "10/6/2025 21:52"
+        },
+        {
+          "nombre": "AAA CARATULEX grupal.docx",
+          "descripcion": "Documento de Word con la carátula para trabajos grupales.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "17/8/2025 09:00"
+        },
+        {
+          "nombre": "AAA CARATULEX grupal.pdf",
+          "descripcion": "Documento PDF de la carátula para trabajos grupales.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "2/8/2025 22:15"
+        },
+        {
+          "nombre": "AAA CARATULEX PDF.docx",
+          "descripcion": "Documento de Word para la carátula en formato PDF.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "19/5/2025 15:14"
+        },
+        {
+          "nombre": "ARTICULOS.docx",
+          "descripcion": "Documento de Word con artículos.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "26/7/2025 23:48"
+        },
+        {
+          "nombre": "ARTICULOS.pdf",
+          "descripcion": "Documento PDF con artículos.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "26/7/2025 23:48"
+        },
+        {
+          "nombre": "basecamp Proyecto_Implementación La....docx",
+          "descripcion": "Documento de Word sobre la implementación de un proyecto en Basecamp.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "8/6/2025 11:49"
+        },
+        {
+          "nombre": "basecamp Proyecto_Implementación La....pdf",
+          "descripcion": "Documento PDF sobre la implementación de un proyecto en Basecamp.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "8/6/2025 11:49"
+        },
+        {
+          "nombre": "Herramienta Informática para gestión de....rar",
+          "descripcion": "Archivo comprimido WinRAR con una herramienta informática.",
+          "tipo": "Archivo WinRAR",
+          "fecha_modificacion": "8/6/2025 12:05"
+        },
+        {
+          "nombre": "PRÁCTICA_EXPERIMENTAL_Comparación....docx",
+          "descripcion": "Documento de Word de una práctica experimental comparativa.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "22/6/2025 23:53"
+        },
+        {
+          "nombre": "PRÁCTICA_EXPERIMENTAL_Comparación....pdf",
+          "descripcion": "Documento PDF de una práctica experimental comparativa.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "22/6/2025 23:05"
+        },
+        {
+          "nombre": "Proyecto de ingenieria.pdf",
+          "descripcion": "Documento PDF de un proyecto de ingeniería.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "17/8/2025 11:37"
+        },
+        {
+          "nombre": "proyecto iot.docx",
+          "descripcion": "Documento de Word de un proyecto de IoT.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "17/8/2025 17:24"
+        },
+        {
+          "nombre": "proyecto iot.pdf",
+          "descripcion": "Documento PDF de un proyecto de IoT.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "17/8/2025 09:33"
+        },
+        {
+          "nombre": "PROYECTO TELEMATICA.pdf",
+          "descripcion": "Documento PDF de un proyecto de telemática.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "31/5/2025 18:28"
+        },
+        {
+          "nombre": "prueba diagnóstico.docx",
+          "descripcion": "Documento de Word de una prueba de diagnóstico.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "21/5/2025 21:37"
+        },
+        {
+          "nombre": "prueba diagnóstico.pdf",
+          "descripcion": "Documento PDF de una prueba de diagnóstico.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "21/5/2025 21:21"
+        },
+        {
+          "nombre": "Trello Proyecto_Implementación Laborat....pdf",
+          "descripcion": "Documento PDF de la implementación de un proyecto en Trello.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "7/6/2025 22:32"
+        },
+        {
+          "nombre": "trello.csv",
+          "descripcion": "Archivo CSV con datos de Trello.",
+          "tipo": "Archivo de valores separados por comas",
+          "fecha_modificacion": "7/6/2025 22:21"
+        },
+        {
+          "nombre": "trello.docx",
+          "descripcion": "Documento de Word relacionado con Trello.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "7/6/2025 22:42"
+        },
+        {
+          "nombre": "trello.pdf",
+          "descripcion": "Documento PDF relacionado con Trello.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "7/6/2025 22:28"
+        },
+        {
+          "nombre": "VIABILIDAD STREAMING.docx",
+          "descripcion": "Documento de Word sobre la viabilidad de un servicio de streaming.",
+          "tipo": "Documento de Microsoft Word",
+          "fecha_modificacion": "10/8/2025 22:20"
+        },
+        {
+          "nombre": "VIABILIDAD STREAMING.pdf",
+          "descripcion": "Documento PDF sobre la viabilidad de un servicio de streaming.",
+          "tipo": "PDF Document",
+          "fecha_modificacion": "10/8/2025 22:20"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "semanas_academicas": [
+    {
+      "semana": "SEMANA 1 - CORTE 1 (INICIO)",
+      "corte": 1,
+      "fecha_inicio": "19-05-2025",
+      "fecha_fin": "25-05-2025"
+    },
+    {
+      "semana": "SEMANA 2 - CORTE 1",
+      "corte": 1,
+      "fecha_inicio": "26-05-2025",
+      "fecha_fin": "01-06-2025"
+    },
+    {
+      "semana": "SEMANA 3 - CORTE 1",
+      "corte": 1,
+      "fecha_inicio": "02-06-2025",
+      "fecha_fin": "08-06-2025"
+    },
+    {
+      "semana": "SEMANA 4 - CORTE 1",
+      "corte": 1,
+      "fecha_inicio": "09-06-2025",
+      "fecha_fin": "15-06-2025"
+    },
+    {
+      "semana": "SEMANA 5 - CORTE 1",
+      "corte": 1,
+      "fecha_inicio": "16-06-2025",
+      "fecha_fin": "22-06-2025"
+    },
+    {
+      "semana": "SEMANA 6 - CORTE 1",
+      "corte": 1,
+      "fecha_inicio": "23-06-2025",
+      "fecha_fin": "29-06-2025"
+    },
+    {
+      "semana": "SEMANA 7 - CORTE 1",
+      "corte": 1,
+      "fecha_inicio": "30-06-2025",
+      "fecha_fin": "06-07-2025"
+    },
+    {
+      "semana": "SEMANA 8 - CORTE 1 (ESTUDIOS Y REFUERZO)",
+      "corte": 1,
+      "fecha_inicio": "07-07-2025",
+      "fecha_fin": "13-07-2025"
+    },
+    {
+      "semana": "SEMANA 9 - CORTE 1 (FIN)",
+      "corte": 1,
+      "fecha_inicio": "14-07-2025",
+      "fecha_fin": "20-07-2025"
+    },
+    {
+      "semana": "SEMANA 10 - CORTE 2 (INICIO)",
+      "corte": 2,
+      "fecha_inicio": "21-07-2025",
+      "fecha_fin": "27-07-2025"
+    },
+    {
+      "semana": "SEMANA 11 - CORTE 2",
+      "corte": 2,
+      "fecha_inicio": "28-07-2025",
+      "fecha_fin": "03-08-2025"
+    },
+    {
+      "semana": "SEMANA 12 - CORTE 2",
+      "corte": 2,
+      "fecha_inicio": "04-08-2025",
+      "fecha_fin": "10-08-2025"
+    },
+    {
+      "semana": "SEMANA 13 - CORTE 2",
+      "corte": 2,
+      "fecha_inicio": "11-08-2025",
+      "fecha_fin": "17-08-2025"
+    },
+    {
+      "semana": "SEMANA 14 - CORTE 2",
+      "corte": 2,
+      "fecha_inicio": "18-08-2025",
+      "fecha_fin": "24-08-2025"
+    },
+    {
+      "semana": "SEMANA 15 - CORTE 2",
+      "corte": 2,
+      "fecha_inicio": "25-08-2025",
+      "fecha_fin": "31-08-2025"
+    },
+    {
+      "semana": "SEMANA 16 - CORTE 2",
+      "corte": 2,
+      "fecha_inicio": "01-09-2025",
+      "fecha_fin": "07-09-2025"
+    },
+    {
+      "semana": "SEMANA 17 - CORTE 2 (FIN)",
+      "corte": 2,
+      "fecha_inicio": "08-09-2025",
+      "fecha_fin": "14-09-2025"
+    },
+    {
+      "semana": "SEMANA 19 - EXAMEN FINAL",
+      "corte": "Examen Final",
+      "fecha_inicio": "22-09-2025",
+      "fecha_fin": "28-09-2025"
+    },
+    {
+      "semana": "SEMANA 20 - EXAMEN SUSPENSO",
+      "corte": "Examen Suspenso",
+      "fecha_inicio": "29-09-2025",
+      "fecha_fin": "05-10-2025"
+    }
+  ]
+}
