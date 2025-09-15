@@ -1,0 +1,84 @@
+INFORME TÉCNICO: APLICACIÓN DE UN MODELO PREDICTIVO DE REGRESIÓN LINEAL
+
+**Estudiante:** [Tu Nombre Completo]
+**Asignatura:** Procesamiento de Información en Aplicaciones Telemáticas
+**Fecha:** 14 de septiembre de 2025
+
+**1. Introducción**
+
+Este informe detalla el procedimiento técnico seguido para la aplicación y evaluación de un modelo de machine learning, utilizando la técnica de regresión lineal. El objetivo es predecir el salario anual de un profesional basándose en sus años de experiencia.
+
+Para este análisis, se ha utilizado un conjunto de datos descargado de una fuente oficial, el cual contiene información sobre salarios y experiencia. El proceso se implementó en Python, utilizando bibliotecas estándar de la industria para el análisis de datos y el modelado predictivo.
+
+**2. Procedimiento Detallado**
+
+A continuación, se describen los pasos ejecutados para el desarrollo del modelo.
+
+**Paso 1: Preparación del Entorno e Importación de Bibliotecas**
+
+El primer paso consistió en la configuración del entorno de desarrollo. Se importaron las bibliotecas esenciales al inicio del script `modelo_predictivo.py` para el manejo de los datos y la construcción del modelo.
+
+- **pandas (pd):** Utilizada para la carga y manipulación de los datos en una estructura tabular (DataFrame).
+- **numpy (np):** Fundamental para operaciones numéricas.
+- **matplotlib.pyplot (plt) y seaborn (sns):** Empleadas para la visualización de datos, como la matriz de correlación y el gráfico de regresión.
+- **scikit-learn:** La biblioteca central para el modelado, de la cual se importaron `train_test_split`, `LinearRegression`, `mean_squared_error` y `r2_score`.
+
+**Paso 2: Carga y Análisis Exploratorio de los Datos**
+
+Se procedió a cargar el conjunto de datos desde el archivo `datos_salarios.csv` utilizando la biblioteca pandas. Posteriormente, se realizó un análisis exploratorio para comprender la estructura y características de la información.
+
+- **Carga de datos:** `pd.read_csv('datos_salarios.csv')`.
+- **Inspección inicial:** Se utilizó `df.head()` para visualizar las primeras filas, confirmando las columnas `Años_Experiencia` y `Salario_Anual`.
+- **Análisis estructural:** `df.info()` proporcionó un resumen de los tipos de datos y la cantidad de registros (1,500 entradas).
+- **Estadísticas descriptivas:** Con `df.describe()`, se calcularon estadísticas fundamentales (media, desviación estándar, etc.) para las variables.
+
+**Paso 3: Análisis de Correlación**
+
+Para validar la idoneidad de un modelo de regresión lineal, se analizó la relación entre las variables. Se calculó y visualizó una matriz de correlación.
+
+- **Cálculo:** `df.corr()` calculó el coeficiente de correlación de Pearson, mostrando una fuerte relación lineal positiva entre los años de experiencia y el salario anual.
+- **Visualización:** `sns.heatmap()` generó un mapa de calor que facilitó la confirmación visual de esta alta correlación.
+
+**Paso 4: Selección de Variables**
+
+Basado en el objetivo del análisis y la correlación observada, se definieron las variables para el modelo:
+
+- **Variable Predictora (X):** `Años_Experiencia`. Es la variable independiente que se utiliza para realizar la predicción.
+- **Variable Objetivo (y):** `Salario_Anual`. Es la variable dependiente que se desea predecir.
+
+**Paso 5: División de los Datos**
+
+Para asegurar una evaluación objetiva del modelo, el conjunto de datos se dividió en dos subconjuntos independientes:
+
+- **Conjunto de Entrenamiento (80%):** Utilizado para que el modelo aprenda la relación entre la experiencia y el salario.
+- **Conjunto de Prueba (20%):** Reservado para evaluar el rendimiento del modelo sobre datos que no ha visto durante el entrenamiento.
+
+Esta división se realizó con la función `train_test_split` de scikit-learn.
+
+**Paso 6: Entrenamiento del Modelo de Regresión Lineal**
+
+En esta fase, se entrenó el modelo de regresión lineal.
+
+- **Instanciación:** Se creó una instancia del modelo: `modelo = LinearRegression()`.
+- **Entrenamiento:** Se utilizó el método `modelo.fit(X_train, y_train)`. El algoritmo ajustó una línea recta a los datos de entrenamiento, aprendiendo los coeficientes (pendiente e intercepción) que mejor describen la relación entre las variables.
+
+**Paso 7: Realización de Predicciones**
+
+Una vez entrenado, el modelo se utilizó para predecir los salarios del conjunto de prueba (`X_test`).
+
+- **Predicción:** `y_pred = modelo.predict(X_test)`.
+
+**Paso 8: Evaluación del Modelo**
+
+Se evaluó cuantitativamente la precisión del modelo utilizando métricas estándar:
+
+- **Error Cuadrático Medio (MSE):** Mide el promedio de los errores al cuadrado. Un valor bajo indica que las predicciones del modelo están muy cerca de los valores reales.
+- **Coeficiente de Determinación (R²):** Indica el porcentaje de la variabilidad en el salario que puede ser explicado por los años de experiencia. Un valor cercano a 1 sugiere un modelo con un excelente poder predictivo.
+
+**Paso 9: Visualización de los Resultados**
+
+Finalmente, se generó un gráfico para interpretar visualmente el desempeño del modelo. El gráfico muestra los datos reales del conjunto de prueba como puntos dispersos y la línea de regresión del modelo superpuesta, demostrando un claro ajuste a la tendencia de los datos.
+
+**3. Conclusión**
+
+Se aplicó con éxito un modelo de regresión lineal al conjunto de datos proporcionado. El análisis demostró que los años de experiencia son un predictor significativo del salario anual. Las métricas de evaluación y la visualización de resultados confirman que el modelo es robusto y capaz de realizar predicciones precisas, cumpliendo así con el objetivo de la práctica.
